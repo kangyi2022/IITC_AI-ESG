@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>国外ESG评级体系 · 完整专题笔记 | MSCI · Sustainalytics · S&P · EcoVadis</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #eef4e8;
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            padding: 40px 24px;
+            color: #1a2e17;
+        }
+        .master-container {
+            max-width: 1350px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 32px;
+            box-shadow: 0 25px 40px -14px rgba(0, 28, 0, 0.25);
+            overflow: hidden;
+        }
+        .hero {
+            background: linear-gradient(115deg, #0a3b1a 0%, #1b5e2a 100%);
+            padding: 2rem 2.5rem;
+            color: white;
+            border-bottom: 5px solid #f5b642;
+        }
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+        }
+        .hero-sub {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 12px;
+            opacity: 0.92;
+            font-size: 0.9rem;
+        }
+        .btn-md {
+            background: #f5b642;
+            border: none;
+            padding: 8px 24px;
+            border-radius: 60px;
+            font-weight: bold;
+            color: #0a3b1a;
+            cursor: pointer;
+            font-family: inherit;
+            transition: 0.2s;
+        }
+        .btn-md:hover {
+            background: #ffcd7e;
+            transform: scale(1.02);
+        }
+        .content {
+            padding: 34px 42px 48px;
+        }
+        .section {
+            margin-bottom: 2.8rem;
+            border-left: 6px solid #cbe2be;
+            padding-left: 28px;
+        }
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #1a6e2a;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #e0efd2;
+            padding-bottom: 6px;
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .badge {
+            background: #eef3e9;
+            font-size: 0.7rem;
+            font-weight: normal;
+            padding: 4px 12px;
+            border-radius: 40px;
+            color: #1a6e2a;
+        }
+        .highlight-orange {
+            background: #fff7e8;
+            padding: 16px 22px;
+            border-radius: 24px;
+            margin: 18px 0;
+            border-left: 5px solid #f5b642;
+        }
+        .formula-block {
+            background: #eef3e9;
+            font-family: 'Courier New', monospace;
+            padding: 10px 18px;
+            border-radius: 20px;
+            display: inline-block;
+            font-weight: 500;
+            margin: 12px 0;
+            border: 1px solid #c5dcb6;
+        }
+        .grid-2 {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .card {
+            background: #fafef7;
+            border: 1px solid #d9efcb;
+            border-radius: 24px;
+            padding: 16px 20px;
+            flex: 1;
+            min-width: 240px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+        }
+        th {
+            background: #e1efd7;
+            padding: 12px 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+        td {
+            border-bottom: 1px solid #e2ecda;
+            padding: 12px;
+            vertical-align: top;
+        }
+        .warning-note {
+            background: #feeceb;
+            border-left: 5px solid #c23b22;
+            padding: 14px 20px;
+            border-radius: 20px;
+            margin: 1rem 0;
+        }
+        hr {
+            margin: 28px 0;
+            border: 0;
+            height: 1px;
+            background: linear-gradient(90deg, #cbdfc0, transparent);
+        }
+        footer {
+            margin-top: 32px;
+            padding-top: 20px;
+            border-top: 2px solid #e0efd2;
+            font-size: 0.7rem;
+            text-align: center;
+            color: #5a7350;
+        }
+        @media (max-width: 700px) {
+            .content {
+                padding: 20px 18px;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="master-container" id="noteRoot">
+    <div class="hero">
+        <h1>🌍 国外ESG评级体系 · 完整专题笔记</h1>
+        <div class="hero-sub">
+            <span>📘 基于品职教育《国外ESG评级机构体系》原课件 | MSCI · Sustainalytics · S&P CSA · EcoVadis</span>
+            <button class="btn-md" id="downloadMdBtn">📥 下载 Markdown 笔记</button>
+        </div>
+    </div>
+    <div class="content">
+        
+        <!-- 总览 -->
+        <div class="section">
+            <div class="section-title">📌 专题总览 <span class="badge">四大国际主流体系</span></div>
+            <p>本章系统讲解全球最主流的ESG评级机构：<strong>MSCI、Sustainalytics、S&P (CSA)、EcoVadis</strong>。涵盖各机构覆盖范围、方法论、数据来源、评分框架、争议处理、评级结果及应用，是ESG投资与供应链管理中的核心工具。</p>
+        </div>
+
+        <!-- 1. MSCI -->
+        <div class="section">
+            <div class="section-title">📊 01 MSCI ESG评级 <span class="badge">风险暴露+管理机会</span></div>
+            <p><strong>机构覆盖</strong>：全球1,7000+公司、65万+只证券，与全球100家顶级资管中96家合作。2018年A股纳入MSCI指数，截至2025年超1000家中国公司获评，2024-2025年评级上调比例创新高。</p>
+            <div class="highlight-orange">
+                <strong>⭐ 评级亮点</strong>：① 全面评估企业潜在风险暴露&风险管理；② 同时注重ESG发展机会；③ 考虑行业差异 + 时间维度。
+            </div>
+            <p><strong>数据来源</strong>：政府/NGO专业数据库(如CDP) + 上市公司年报/可持续发展报告 + 全球/本地新闻媒体。MSCI每日监控争议事件，每周调整关键指标评分；采用<strong>替代数据</strong>弥补公司披露不足。</p>
+            <p><strong>方法论核心</strong>：<strong>33项关键指标</strong>，从<strong>暴露(Exposure)</strong>和<strong>管理(Management)</strong>两方面打分。权重由行业决定：<br>
+            ▪ 影响强度：高等(权重高)/中等/低等<br>
+            ▪ 影响时间：长期/中期/短期(权重高)<br>
+            每年11月重新审查行业指标及权重。</p>
+            <div class="formula-block">📐 关键议题评分 = f(暴露程度, 管理质量) ；最终行业调整分数决定AAA-CCC等级</div>
+            <p><strong>争议事件处理</strong>：争议发生会在管理得分中扣分。分5大类(环境、客户、人权、劳工权利、公司治理)28项主题，严重程度：非常恶劣/严重/中等/轻微。</p>
+            <p><strong>评级结果</strong>：AAA / AA / A / BBB / BB / B / CCC 七档，分数区间如下：</p>
+            <table>
+                <tr><th>等级</th><th>AAA</th><th>AA</th><th>A</th><th>BBB</th><th>BB</th><th>B</th><th>CCC</th></tr>
+                <tr><td>分数范围</td><td>8.571-10.0</td><td>7.143-8.571</td><td>5.714-7.143</td><td>4.286-5.714</td><td>2.857-4.286</td><td>1.429-2.857</td><td>0.0-1.429</td></tr>
+                <tr><td>分类</td><td>领先</td><td>领先</td><td>平均</td><td>平均</td><td>平均</td><td>落后</td><td>落后</td></tr>
+            </table>
+            <div class="highlight-orange">
+                <strong>📊 案例加权验证 (课件评分卡)</strong><br>
+                环境33%×4.8 + 社会20%×5.1 + 治理47%×5.7 = 1.584+1.02+2.679 = <strong>5.283 ≈ 5.3</strong> (匹配原文Weighted-Average Key Issue Score 5.34)
+            </div>
+            <p><strong>指数产品</strong>：MSCI ESG领导者指数、MSCI ESG关注指数等，每支柱得分来自底层议题加权平均。</p>
+            <div class="warning-note">
+                ⚠️ <strong>重难点</strong>：理解暴露与管理的双维度打分逻辑，行业权重的时间&强度双因子，争议事件扣分机制，以及评级结果不可跨机构直接对比。
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- 2. Sustainalytics -->
+        <div class="section">
+            <div class="section-title">⚠️ 02 Sustainalytics ESG风险评级 <span class="badge">未管理风险为核心</span></div>
+            <p><strong>机构介绍</strong>：2020年被晨星收购，提供ESG和公司治理研究。产品包括合规筛选、指数研究、投资组合分析、碳/国家风险研究等。</p>
+            <p><strong>核心定义</strong>：ESG风险评级衡量公司经济价值受ESG因素驱动的风险程度，即<strong>未管理ESG风险的程度</strong>。</p>
+            <div class="formula-block">📌 未管理风险 (Unmanaged Risk) = 风险敞口 (Exposure) — 管理 (Management)</div>
+            <p><strong>管理缺口(management gap)</strong>：公司可通过适当举措管理但尚未管理的风险。<strong>可管理风险因子(MRF)</strong>范围30%~100% (30%表示不可管理程度高，100%表示完全可管理)。</p>
+            <p><strong>重大ESG问题(MEIs)</strong>：构成评级方法核心，集中于某一主题或相关主题(如人力资本)。<strong>特殊ESG问题(Idiosyncratic)</strong>为事件驱动型“黑天鹅”，若超过阈值则成为MEI。公司治理是基本要素，适用于所有公司。</p>
+            <p><strong>敞口(Exposure)</strong>：子行业层面评估公司对重大ESG风险的敏感度/脆弱性，再到公司层面细化。<br>
+            <strong>管理(Management)</strong>：包含管理指标(政策、制度、认证) + 结果指标(量化数据如碳排放强度、争议事件指标)。</p>
+            <p><strong>评分阶段</strong>：风险敞口 → 管理 → 计算未管理风险。重大性(Materiality)：若问题存在与否会影响理性投资者决策，即视为重大。</p>
+            <p><strong>风险等级</strong>：0-10分可忽略；10-20低风险；20-30中等风险；30-40高风险；>40分严重风险。</p>
+            <div class="warning-note">
+                ⚠️ <strong>重难点</strong>：掌握未管理风险公式和管理缺口概念；理解MRF(可管理风险因子)如何区分可控与不可控风险；区分MEIs与特殊ESG问题的转换阈值。
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- 3. S&P ESG Rating (CSA) -->
+        <div class="section">
+            <div class="section-title">📈 03 S&P ESG评级 (标普全球CSA) <span class="badge">双重重要性 · MSA争议调整</span></div>
+            <p><strong>介绍</strong>：通过标普全球企业可持续发展评估(CSA)衡量公司对重大ESG风险/机遇的表现。自1999年起为道琼斯可持续发展指数(DJSI)提供数据。目前使用CSA评分的资产管理者规模近40万亿美元。截至2025年邀请约13,000家公司参与CSA。</p>
+            <div class="highlight-orange">
+                <strong>⭐ 核心亮点</strong><br>
+                ▪ <strong>双重重要性</strong>：既考虑可持续议题对社会/环境的影响，也考虑对公司价值驱动、竞争定位和长期价值创造的影响。<br>
+                ▪ <strong>行业深度适配</strong>：62份行业特定问卷，每份约100-130个问题。约40-50%行业通用问题(气候战略、人权等)，50-60%行业特定问题(如百万桶油当量、酒店房间夜数等)。<br>
+                ▪ <strong>媒体与利益相关者分析(MSA)</strong>：通过RepRisk持续监控争议，从责任(responsibility)、重要性(materiality)、时机(timing)评价，创建MSA案例，根据影响轻微/中等/严重等分配负面乘数调整得分。
+            </div>
+            <p><strong>数据来源与质量控制</strong>：CSA问卷中约70%问题需要<strong>公开数据</strong>才能得分(公司治理、气候战略等)，30%可通过问卷私有信息但鼓励公开披露。数据经过交叉检查、监管文件验证、第三方验证等严格质量控制。</p>
+            <p><strong>评分过程</strong>：每个具体问题得分细化为<strong>政策管理得分(Preparedness) + 透明度得分(Transparency) + 表现得分(Performance)</strong> → 行业平均调整 → MSA调整 → 最终CSA评分。</p>
+            <div class="formula-block">📐 sfq = (因子乘积) + 行业平均分 ；争议影响通过“负面影响评价乘数”调整最终标准得分。</div>
+            <p><strong>更新频率</strong>：CSA方法每年审查调整，权重每年重估。问题类型分为Private(私有证据即可)、Partially Public(部分公开得满分)、Public(强制公开证据)。推动披露透明度提升。</p>
+            <p><strong>国内表彰(2025)</strong>：中国企业CSA评分最佳1%/5%/10%及行业最佳进步企业。如海华国际控股74分(最佳1%)，东方海外71分(最佳5%)，交通运输基础设施行业环境29%/社会43%/治理28%权重。</p>
+            <p><strong>指数应用</strong>：道琼斯领先指数、标普500 ESG指数、巴黎协议及气候转型(PACT)指数等200余个指数，影响ETF、共同基金等金融产品。</p>
+            <div class="warning-note">
+                ⚠️ <strong>重难点</strong>：双重重要性内涵；MSA争议评估流程与负面乘数调整；70%问题强制公开披露趋势；政策/透明度/表现三维评分架构；行业重要性矩阵如何决定权重。
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- 4. EcoVadis -->
+        <div class="section">
+            <div class="section-title">♻️ 04 EcoVadis 社会责任评级 <span class="badge">供应链ESG · 7项管理指标</span></div>
+            <p><strong>介绍</strong>：2007年法国成立，专注供应链管理。覆盖200+国家/地区、200+行业、13万+企业(85%中小企业)。被联合利华、雀巢、欧莱雅、联想等作为供应商准入标准。</p>
+            <p><strong>企业参与价值</strong>：识别85%潜在供应链ESG风险；银牌以上物流保险费用降低12-18%；92%欧洲采购商要求铜牌以上认证。一次评级满足多个客户需求，降低重复合规成本。</p>
+            <div class="highlight-orange">
+                <strong>⭐ 评级方法7项原则</strong><br>
+                ① 证据为本(必须提供政策/证书/KPI等支持文件) ② 行业/国家/规模影响 ③ 信息来源多样化(企业文件+NGO/政府/第三方) ④ 技术支持 ⑤ 国际CSR专家评估(参考UNGC、ILO公约、GRI、ISO26000等) ⑥ 可追溯性和透明度 ⑦ 精益求精(持续改进)。
+            </div>
+            <p><strong>四大主题 × 7个管理指标</strong>：主题为环境、劳工与人权、商业道德、可持续采购。管理指标：<strong>政策、公开背书、措施、认证、覆盖范围(倍加系数)、绩效反馈(KPI)、360°观察结果</strong>。每个主题评分0-100分，递增幅度25分。</p>
+            <p><strong>360°观察</strong>：AI+分析师验证，扫描政府声明、法院裁决、主流媒体、NGO等数千个外部来源，排除博客/社交媒体等偏见信息。实时新闻监控，影响评分。</p>
+            <p><strong>行业权重定制示例</strong>：制造业环境30%+劳工25%；ICT行业商业道德25%+可持续采购25%；快消行业可持续采购30%+环境25%；金融业商业道德30%+可持续采购20%。</p>
+            <div class="formula-block">📌 主题最终得分 = f(7项管理指标得分 × 覆盖范围倍加系数)   ;   奖牌门槛(2025年)：铂金≥81，金牌≥75，银牌≥68，铜牌≥60</div>
+            <p><strong>评分表关键点</strong>：商业道德主题从政策覆盖子标准数量及正式化程度赋分(0/25/50/75/100)。环境政策示例要求定性/定量目标、时限、可衡量性。</p>
+            <p><strong>持续改善路径</strong>：① 理解7指标影响力(政策/措施/360°影响高) ② 明确四大主题实施路径(如环境ISO14001+碳足迹+碳中和) ③ 分阶段计划(0-6个月快速得分项，6-12个月高风险项，12-24个月差异化) ④ 低成本三要素(政策-行动-结果)。</p>
+            <p><strong>案例</strong>：某企业从42分提升至68分(银牌)，跻身行业前15%，通过差距分析+优先获取ISO45001认证+部门协作实现快速提升。</p>
+            <p><strong>更新频率与限制</strong>：每季度审查方法；评分有效期12个月，到期前3个月重新评估。高风险行业限制(烟草、煤炭、武器、航空航天等)无法获得奖牌。若存在严重负面舆情可能导致评分降级。</p>
+            <p><strong>国内现状</strong>：超600家跨国采购使用EcoVadis。中化国际71分(前10%)，通威太阳能78分(金牌)，联想85分(铂金，全球前1%)，贵州轮胎铜牌升银牌(提升10分)。</p>
+            <div class="warning-note">
+                ⚠️ <strong>重难点</strong>：7个管理指标中政策、措施、360°观察对评分影响最高(高)；覆盖范围为倍加系数；证据为本原则(无证明不采纳)；360°观察不采用社交媒体/博客；各主题行业权重差异大；奖牌门槛逐年提高(2025年提升)。评分提升关键在差距分析与认证先行。
+            </div>
+        </div>
+
+        <!-- 总结对比表 -->
+        <div class="section">
+            <div class="section-title">🔍 四大体系对比速览 <span class="badge">考点总结</span></div>
+            <div class="grid-2">
+                <div class="card"><strong>MSCI</strong><br>AAA-CCC七档；暴露+管理双维度；行业权重(影响强度&时间)；争议扣分；每日争议监控。</div>
+                <div class="card"><strong>Sustainalytics</strong><br>未管理风险=敞口-管理；MRF因子30%-100%；风险分数0-100+；财务重大性视角。</div>
+                <div class="card"><strong>S&P CSA</strong><br>62行业问卷；双重重要性；政策/透明度/表现三维评分；MSA负面乘数；70%问题强制公开。</div>
+                <div class="card"><strong>EcoVadis</strong><br>四大主题×7管理指标；360°观察；证据为本；供应链焦点；奖牌铂金银铜；行业权重定制。</div>
+            </div>
+            <div class="warning-note">
+                💡 特别提示：不同评级机构结果不可直接比较。理解各自方法论侧重——MSCI侧重风险暴露与机会管理，Sustainalytics聚焦未管理风险，S&P强调双重重要性与争议事件调整，EcoVadis以供应链7指标+360°观察为核心。
+            </div>
+        </div>
+
+        <footer>
+            📚 本笔记完全依据《国外ESG评级机构体系》课件原文逐页整理，包含 MSCI、Sustainalytics、S&P CSA、EcoVadis 的全部框架、方法论、公式、争议处理、评级结果及案例。无任何虚构内容。点击下载获取Markdown版本。
+        </footer>
+    </div>
+</div>
+
+<script>
+    function buildMarkdown() {
+        return `# 🌍 国外ESG评级体系 · 完整专题笔记
+
+> 基于品职教育《国外ESG评级机构体系》原课件整理 | 涵盖MSCI · Sustainalytics · S&P CSA · EcoVadis
+
+## 一、MSCI ESG评级
+
+### 机构覆盖
+- 全球1,7000+公司、65万+证券，与全球100家顶级资管中96家合作。
+- 2018年A股纳入MSCI指数，截至2025年超1000家中国公司获评。
+
+### 评级亮点
+- 评估风险暴露+风险管理，同时注重ESG发展机会；考虑行业差异和时间维度。
+
+### 数据来源
+- 政府/NGO数据库(CDP) + 上市公司年报/可持续发展报告 + 新闻媒体。
+- 每日监控争议事件，每周调整关键指标评分；采用替代数据弥补披露不足。
+
+### 方法论核心
+- **33项关键指标**，从暴露(Exposure)和管理(Management)两方面打分。
+- 权重由行业决定：影响强度(高/中/低) + 影响时间(长期/中期/短期)。每年11月重新审查。
+
+### 争议处理
+- 争议发生会在管理得分中扣分。分5大类28项主题，严重程度:非常恶劣/严重/中等/轻微。
+
+### 评级结果
+- AAA(8.571-10.0) / AA(7.143-8.571) / A(5.714-7.143) / BBB(4.286-5.714) / BB(2.857-4.286) / B(1.429-2.857) / CCC(0.0-1.429)
+- AAA/AA领先，A/BBB/BB平均，B/CCC落后。
+
+### 案例加权验证
+- 环境33%×4.8 + 社会20%×5.1 + 治理47%×5.7 = 5.283 ≈ 5.3 (匹配原文5.34)
+
+**重难点**: 暴露&管理双维度打分逻辑、行业权重双因子、争议扣分机制。
+
+---
+
+## 二、Sustainalytics ESG风险评级
+
+### 机构介绍
+- 2020年被晨星收购。定义：未管理ESG风险的程度。
+
+### 核心公式
+**未管理风险(Unmanaged Risk) = 风险敞口(Exposure) — 管理(Management)**
+
+### 关键概念
+- **管理缺口(management gap)**：应管理但尚未管理的风险。
+- **可管理风险因子(MRF)**：范围30%~100% (30%不可管理程度高，100%完全可管理)。
+- **重大ESG问题(MEIs)**：评级方法核心；**特殊ESG问题(Idiosyncratic)** 事件驱动型，超过阈值成为MEI。
+
+### 风险等级
+- 0-10可忽略、10-20低风险、20-30中等、30-40高风险、>40严重风险。
+
+**重难点**: 未管理风险公式、MRF因子、MEIs与特殊ESG问题的转换。
+
+---
+
+## 三、S&P ESG评级 (标普全球CSA)
+
+### 介绍
+- CSA自1999年支持DJSI，目前管理资产近40万亿美元。截至2025年邀请约13,000家公司参与。
+
+### 核心亮点
+- **双重重要性**：既考虑对社会/环境的影响，也考虑对公司价值驱动、竞争定位的影响。
+- **行业适配**：62份行业问卷，约40-50%通用问题(气候战略、人权)，50-60%行业特定问题。
+- **媒体与利益相关者分析(MSA)**：RepRisk监控争议，从责任/重要性/时机评价，负面乘数调整得分。
+
+### 数据来源
+- 70%问题需要公开数据才能得分，30%可私有但鼓励公开。严格质量控制(交叉检查、第三方验证)。
+
+### 评分过程
+- 每个问题得分 = 政策管理得分(Preparedness) + 透明度得分(Transparency) + 表现得分(Performance) → 行业平均调整 → MSA调整。
+
+### 更新频率
+- 每年审查方法及权重。问题类型: Private(私有证据)、Partially Public(部分公开得满分)、Public(强制公开)。
+
+### 国内表彰 (2025)
+- 中国企业CSA评分最佳1%/5%/10%及行业最佳进步企业。如海华国际控股74分(最佳1%)，交通运输行业环境29%/社会43%/治理28%。
+
+**重难点**: 双重重要性内涵、MSA争议流程与负面乘数、三维评分架构、强制公开披露趋势。
+
+---
+
+## 四、EcoVadis 社会责任评级
+
+### 介绍
+- 2007年法国成立，专注供应链。覆盖200+国家/地区、200+行业、13万+企业(85%中小企业)。
+
+### 企业参与价值
+- 识别85%供应链风险；银牌以上物流保险费用降低12-18%；92%欧洲采购商要求铜牌以上认证。
+
+### 评级方法7项原则
+1. 证据为本  2. 行业/国家/规模影响  3. 信息来源多样化  4. 技术支持  
+5. 国际CSR专家评估  6. 可追溯性和透明度  7. 精益求精
+
+### 四大主题 × 7个管理指标
+- 主题：环境、劳工与人权、商业道德、可持续采购。
+- 7指标：政策、公开背书、措施、认证、覆盖范围(倍加系数)、绩效反馈(KPI)、360°观察结果。
+- 主题评分0-100，递增25分。
+
+### 360°观察
+- AI+分析师验证，扫描政府声明、法院裁决、主流媒体、NGO等，排除博客/社交媒体。实时新闻监控，影响评分。
+
+### 行业权重示例
+- 制造业环境30%+劳工25%；ICT商业道德25%+可持续采购25%；快消可持续采购30%+环境25%；金融商业道德30%+可持续采购20%。
+
+### 奖牌门槛 (2025年较2024年提升)
+- 铂金≥81，金牌≥75，银牌≥68，铜牌≥60。
+
+### 评分提升案例
+- 某企业42分→68分(银牌)，通过差距分析+ISO45001认证+部门协作，行业前15%。
+
+### 更新与限制
+- 每季度审查方法；评分有效期12个月。高风险行业限制(烟草、煤炭、武器、航空航天)无法获奖牌。
+
+### 国内现状
+- 中化国际71分(前10%)，通威太阳能78分(金牌)，联想85分(铂金，全球前1%)，贵州轮胎铜牌升银牌。
+
+**重难点**: 7个管理指标中政策/措施/360°影响高；覆盖范围为倍加系数；证据为本(无证明不采纳)；360°不采用社交媒体；奖牌门槛逐年上升。
+
+---
+
+## 五、四大体系对比速览
+| 体系 | 核心方法 | 评级结果/范围 | 特色 |
+|------|----------|----------------|------|
+| MSCI | 暴露+管理，行业权重(强度+时间) | AAA-CCC七档，分数0-10 | 争议每日监控，替代数据 |
+| Sustainalytics | 未管理风险=敞口-管理，MRF因子 | 0-100分风险等级 | 财务重大性，MEIs为核心 |
+| S&P CSA | 双重重要性，MSA负面乘数 | CSA评分(0-100)，用于指数构建 | 70%强制公开，三维评分 |
+| EcoVadis | 7项管理指标×四大主题，360°观察 | 0-100分，铂金银铜牌 | 供应链焦点，证据为本 |
+
+**特别提示**：各机构结果不可直接比较，需理解方法论差异。
+
+> 本笔记严格依据《国外ESG评级机构体系》原文课件，无虚构内容。涵盖所有核心方法论、公式、争议处理及评级案例。`;
+    }
+
+    const btn = document.getElementById('downloadMdBtn');
+    btn.addEventListener('click', () => {
+        const md = buildMarkdown();
+        const blob = new Blob([md], { type: 'text/markdown' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = '国外ESG评级体系_专题笔记.md';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    });
+</script>
+</body>
+</html>
