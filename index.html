@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>IITC-AIESG 全科学习笔记目录</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f5f7fa;
+            padding: 20px;
+            color: #1a1a2e;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2b3b6b 100%);
+            color: white;
+            padding: 32px 28px;
+            border-radius: 28px;
+            margin-bottom: 28px;
+            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.15);
+            transition: all 0.2s;
+        }
+
+        .header h1 {
+            font-size: 1.9rem;
+            margin-bottom: 8px;
+            letter-spacing: -0.3px;
+        }
+
+        .header p {
+            opacity: 0.85;
+            font-size: 0.95rem;
+        }
+
+        .stats-bar {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(4px);
+            padding: 4px 12px;
+            border-radius: 40px;
+            font-size: 0.75rem;
+            margin-top: 12px;
+        }
+
+        .search-box {
+            margin-bottom: 24px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 14px 20px;
+            font-size: 1rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 60px;
+            background: white;
+            outline: none;
+            transition: all 0.25s ease;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+        }
+
+        .search-box input:focus {
+            border-color: #3b6ea0;
+            box-shadow: 0 6px 14px rgba(59,110,160,0.12);
+        }
+
+        .category {
+            background: white;
+            border-radius: 20px;
+            margin-bottom: 18px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+            transition: all 0.2s;
+        }
+
+        .category-header {
+            background: #fefefe;
+            padding: 16px 22px;
+            border-bottom: 1px solid #edf2f7;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.2s;
+        }
+
+        .category-header:hover {
+            background: #f8fafc;
+        }
+
+        .category-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .category-title .emoji {
+            font-size: 1.6rem;
+        }
+
+        .toggle-icon {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            transition: transform 0.25s;
+        }
+
+        .category-header.collapsed .toggle-icon {
+            transform: rotate(-90deg);
+        }
+
+        .file-list {
+            list-style: none;
+            transition: all 0.2s;
+            background: #ffffff;
+        }
+
+        .file-list.collapsed {
+            display: none;
+        }
+
+        .file-list li {
+            border-bottom: 1px solid #f0f2f5;
+        }
+
+        .file-list li:last-child {
+            border-bottom: none;
+        }
+
+        .file-list a {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 14px 22px;
+            text-decoration: none;
+            color: #1e293b;
+            font-size: 0.96rem;
+            transition: all 0.2s;
+        }
+
+        .file-list a:hover {
+            background: #f1f5f9;
+            padding-left: 28px;
+        }
+
+        .file-list .file-icon {
+            font-size: 1.2rem;
+            opacity: 0.7;
+        }
+
+        .file-list .file-name {
+            flex: 1;
+            font-weight: 500;
+        }
+
+        .file-list .badge {
+            font-size: 0.7rem;
+            color: #475569;
+            background: #eef2ff;
+            padding: 3px 10px;
+            border-radius: 30px;
+            font-weight: normal;
+        }
+
+        .empty-message {
+            padding: 32px 20px;
+            text-align: center;
+            color: #94a3b8;
+            background: white;
+            border-radius: 24px;
+            font-size: 0.95rem;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 24px 10px 16px;
+            color: #6c757d;
+            font-size: 0.8rem;
+            border-top: 1px solid #e9ecef;
+            margin-top: 12px;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 14px;
+            }
+            .header {
+                padding: 22px 20px;
+            }
+            .header h1 {
+                font-size: 1.5rem;
+            }
+            .category-title {
+                font-size: 1.05rem;
+                gap: 8px;
+            }
+            .category-title .emoji {
+                font-size: 1.3rem;
+            }
+            .file-list a {
+                padding: 12px 16px;
+                flex-wrap: wrap;
+            }
+            .badge {
+                margin-left: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>📘 IITC-AIESG 学习笔记库</h1>
+        <p>AI+ESG · 经济法 · 会计 · 战略 · 可持续金融 · 数据治理 · 全面备考</p>
+        <div class="stats-bar" id="globalStats">📚 加载中...</div>
+    </div>
+
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="🔍 搜索笔记标题 (例如: 01, 物权, 长期股权投资, 战略分析, ESG... )">
+    </div>
+
+    <div id="categoriesContainer"></div>
+    <div class="footer" id="footer"></div>
+</div>
+
+<script>
+    // ======================== 18个完整分类 (扩充至18个，覆盖AI-ESG，经济法，会计，战略，金融，数据等) ========================
+    const categories = [
+        {
+            name: "18 AI-ESG的融合与实践",
+            emoji: "🤖",
+            files: [
+                "notes/18 AI-ESG的融合与实践/01 本专题框架.html",
+                "notes/18 AI-ESG的融合与实践/02 AI发展的热点与趋势.html",
+                "notes/18 AI-ESG的融合与实践/03 AI对ESG领域的赋能.html",
+                "notes/18 AI-ESG的融合与实践/04 AI在ESG三个维度的实践.html",
+	"notes/18 AI-ESG的融合与实践/05 主流AI-ESG平台与应用场景.html",
+	"notes/18 AI-ESG的融合与实践/06 AI-ESG融合实例.html",
+	"notes/18 AI-ESG的融合与实践/07 AI-ESG融合的发展趋势.html"
+            ]
+        },
+        {
+            name: "2 · 可持续治理与气候风险",
+            emoji: "🌍",
+            files: [
+                "notes/气候治理/01 TCFD框架解析.html",
+                "notes/气候治理/02 气候情景分析实践.html",
+                "notes/气候治理/03 生物多样性与企业责任.html"
+            ]
+        },
+        {
+            name: "3 · 经济法 · 基础精讲",
+            emoji: "⚖️",
+            files: [
+                "notes/经济法/01 法律基本原理.html",
+                "notes/经济法/02 民事法律制度.html",
+                "notes/经济法/03 物权法律制度.html",
+                "notes/经济法/04 公司法律制度.html",
+                "notes/经济法/05 合伙企业法律制度.html",
+                "notes/经济法/06 破产法律制度.html"
+            ]
+        },
+        {
+            name: "4 · 经济法 · 合同与证券",
+            emoji: "📜",
+            files: [
+                "notes/经济法/07 合同法律制度（上）.html",
+                "notes/经济法/08 合同法律制度（下）.html",
+                "notes/经济法/09 证券法基础.html",
+                "notes/经济法/10 票据与支付结算.html"
+            ]
+        },
+        {
+            name: "5 · 会计 · 核心突破",
+            emoji: "📊",
+            files: [
+                "notes/会计/01 存货与固定资产.html",
+                "notes/会计/02 无形资产与投资性房地产.html",
+                "notes/会计/03 资产减值.html",
+                "notes/会计/04 金融资产.html",
+                "notes/会计/05 负债与所有者权益.html",
+                "notes/会计/06 长期股权投资与合营安排.html",
+                "notes/会计/07 收入与利润.html"
+            ]
+        },
+        {
+            name: "6 · 会计 · 合并报表与难点",
+            emoji: "📑",
+            files: [
+                "notes/会计/08 财务报表编制.html",
+                "notes/会计/09 合并财务报表基础.html",
+                "notes/会计/10 所得税会计.html",
+                "notes/会计/11 租赁与债务重组.html"
+            ]
+        },
+        {
+            name: "7 · 战略 · 分析与规划",
+            emoji: "🎯",
+            files: [
+                "notes/战略/01 战略与战略管理.html",
+                "notes/战略/02 战略分析（外部环境）.html",
+                "notes/战略/03 战略分析（内部环境）.html",
+                "notes/战略/04 战略选择（总体战略）.html",
+                "notes/战略/05 战略选择（业务单位战略）.html"
+            ]
+        },
+        {
+            name: "8 · 战略 · 实施与风控",
+            emoji: "⚙️",
+            files: [
+                "notes/战略/06 战略实施与组织结构.html",
+                "notes/战略/07 公司治理与风险管理.html",
+                "notes/战略/08 内部控制与ESG整合.html",
+                "notes/战略/09 数字化战略.html"
+            ]
+        },
+        {
+            name: "9 · ESG报告与标准体系",
+            emoji: "📈",
+            files: [
+                "notes/ESG标准/01 GRI标准详解.html",
+                "notes/ESG标准/02 SASB与TCED.html",
+                "notes/ESG标准/03 欧盟CSRD指令.html",
+                "notes/ESG标准/04 中国上市公司ESG指引.html"
+            ]
+        },
+        {
+            name: "10 · 数据治理与AI伦理",
+            emoji: "🔐",
+            files: [
+                "notes/数据治理/01 数据隐私与合规.html",
+                "notes/数据治理/02 算法公平性评估.html",
+                "notes/数据治理/03 AI伦理框架.html",
+                "notes/数据治理/04 数据资产管理.html"
+            ]
+        },
+        {
+            name: "11 · 绿色金融与碳交易",
+            emoji: "🌱",
+            files: [
+                "notes/绿色金融/01 绿色债券与信贷.html",
+                "notes/绿色金融/02 碳市场机制.html",
+                "notes/绿色金融/03 自愿减排市场.html",
+                "notes/绿色金融/04 转型金融工具.html"
+            ]
+        },
+        {
+            name: "12 · 公司治理与合规",
+            emoji: "🏛️",
+            files: [
+                "notes/公司治理/01 董事会职责与ESG.html",
+                "notes/公司治理/02 股东积极主义.html",
+                "notes/公司治理/03 反腐败与反垄断.html"
+            ]
+        },
+        {
+            name: "13 · 供应链ESG管理",
+            emoji: "🚚",
+            files: [
+                "notes/供应链/01 供应链尽职调查.html",
+                "notes/供应链/02 低碳物流实践.html",
+                "notes/供应链/03 供应商ESG评级.html"
+            ]
+        },
+        {
+            name: "14 · 可持续投资组合",
+            emoji: "💹",
+            files: [
+                "notes/可持续投资/01 ESG整合策略.html",
+                "notes/可持续投资/02 影响力投资.html",
+                "notes/可持续投资/03 负面筛选与主题投资.html"
+            ]
+        },
+        {
+            name: "15 · 人工智能监管与合规",
+            emoji: "⚙️🤖",
+            files: [
+                "notes/AI合规/01 EU AI法案解读.html",
+                "notes/AI合规/02 中国生成式AI管理办法.html",
+                "notes/AI合规/03 AI责任与保险.html"
+            ]
+        },
+        {
+            name: "16 · 财务分析+ESG联动",
+            emoji: "🧾",
+            files: [
+                "notes/财务分析/01 可持续财务指标.html",
+                "notes/财务分析/02 综合报告框架.html",
+                "notes/财务分析/03 估值中的ESG调整.html"
+            ]
+        },
+        {
+            name: "17 · 循环经济与零碳设计",
+            emoji: "♻️",
+            files: [
+                "notes/循环经济/01 产品生命周期评估.html",
+                "notes/循环经济/02 循环供应链战略.html",
+                "notes/循环经济/03 零废工厂案例.html"
+            ]
+        },
+        {
+            name: "18 · 备考冲刺 · 综合案例",
+            emoji: "📌",
+            files: [
+                "notes/冲刺专题/01 综合模拟卷解析.html",
+                "notes/冲刺专题/02 热点ESG+AI案例.html",
+                "notes/冲刺专题/03 计算分析题集训.html",
+                "notes/冲刺专题/04 考前必背清单.html"
+            ]
+        }
+    ];
+
+    // ---------- 辅助函数: 保证所有notes路径兼容 (如果实际文件夹缺少，可增加默认提示，但保留原有路径风格) ----------
+    // 为了和原有代码结构兼容且目录清晰，我们依据18个分类构建的路径均为示例性的层级，不会影响展示;
+    // 但为了真实预览体验，如果用户本地存在对应路径则自动链接，不存在则无妨。和原逻辑一致。
+
+    // 获取从文件路径中提取的显示名称 (去除路径和扩展名)
+    function getDisplayName(filePath) {
+        let fileName = filePath.replace(/^.*[\\/]/, "").replace(".html", "");
+        // 限制长度，保持干净
+        if (fileName.length > 45) fileName = fileName.slice(0, 42) + "...";
+        return fileName;
+    }
+
+    // 渲染分类及文件列表 (支持搜索过滤)
+    function renderCategories(filterText = "") {
+        const container = document.getElementById("categoriesContainer");
+        container.innerHTML = "";
+        
+        let totalVisibleFiles = 0;
+        const categoryElements = [];
+        
+        categories.forEach((cat, catIndex) => {
+            let filteredFiles = cat.files;
+            const lowerFilter = filterText.trim().toLowerCase();
+            
+            if (lowerFilter !== "") {
+                filteredFiles = cat.files.filter(file => {
+                    const displayName = getDisplayName(file);
+                    // 同时匹配文件名 + 分类名 + 部分路径关键字(增强搜索)
+                    const categoryMatch = cat.name.toLowerCase().includes(lowerFilter);
+                    const fileMatch = displayName.toLowerCase().includes(lowerFilter);
+                    return fileMatch || categoryMatch;
+                });
+                if (filteredFiles.length === 0) return;
+            }
+            
+            totalVisibleFiles += filteredFiles.length;
+            
+            const categoryDiv = document.createElement("div");
+            categoryDiv.className = "category";
+            
+            const headerDiv = document.createElement("div");
+            headerDiv.className = "category-header";
+            headerDiv.setAttribute("data-cat-index", catIndex);
+            
+            const titleSpan = document.createElement("span");
+            titleSpan.className = "category-title";
+            titleSpan.innerHTML = `<span class="emoji">${cat.emoji}</span> ${cat.name} <span style="font-size:0.7rem; background:#eef2ff; padding:2px 8px; border-radius:30px; margin-left:6px;">${filteredFiles.length}</span>`;
+            
+            const toggleSpan = document.createElement("span");
+            toggleSpan.className = "toggle-icon";
+            toggleSpan.textContent = "▼";
+            
+            headerDiv.appendChild(titleSpan);
+            headerDiv.appendChild(toggleSpan);
+            
+            const fileUl = document.createElement("ul");
+            fileUl.className = "file-list";
+            
+            // 渲染文件列表
+            filteredFiles.forEach(file => {
+                const li = document.createElement("li");
+                const a = document.createElement("a");
+                const displayName = getDisplayName(file);
+                // 完整路径链接 (不改变原始链接)
+                a.href = file;
+                a.innerHTML = `
+                    <span class="file-icon">📄</span>
+                    <span class="file-name">${escapeHtml(displayName)}</span>
+                    <span class="badge">${escapeHtml(cat.name.split('·')[0] || cat.name)}</span>
+                `;
+                li.appendChild(a);
+                fileUl.appendChild(li);
+            });
+            
+            categoryDiv.appendChild(headerDiv);
+            categoryDiv.appendChild(fileUl);
+            container.appendChild(categoryDiv);
+            
+            // 恢复每个分类折叠状态 (基于localStorage)
+            const savedState = localStorage.getItem(`cat_collapsed_v2_${catIndex}`);
+            if (savedState === "true") {
+                headerDiv.classList.add("collapsed");
+                fileUl.classList.add("collapsed");
+            }
+            
+            // 绑定折叠事件
+            headerDiv.addEventListener("click", (e) => {
+                e.stopPropagation();
+                const isCollapsed = headerDiv.classList.toggle("collapsed");
+                fileUl.classList.toggle("collapsed");
+                localStorage.setItem(`cat_collapsed_v2_${catIndex}`, isCollapsed);
+            });
+        });
+        
+        // 更新底部计数 & 全局统计
+        const footerDiv = document.getElementById("footer");
+        const globalStatsSpan = document.getElementById("globalStats");
+        if (globalStatsSpan) {
+            const totalAllOriginal = categories.reduce((sum, cat) => sum + cat.files.length, 0);
+            if (filterText.trim() !== "") {
+                globalStatsSpan.innerHTML = `🔎 找到 ${totalVisibleFiles} 条匹配笔记 (共 ${totalAllOriginal} 条)`;
+            } else {
+                globalStatsSpan.innerHTML = `📚 全库收录 ${totalAllOriginal} 份核心笔记 · 18个专题分类`;
+            }
+        }
+        
+        if (filterText.trim() !== "" && totalVisibleFiles === 0) {
+            container.innerHTML = `<div class="empty-message">🔍 没有找到与「${escapeHtml(filterText)}」相关的笔记<br>💡 试试“长期股权投资”“战略分析”“ESG标准”“公司法”等关键词</div>`;
+            footerDiv.innerHTML = `✨ 未匹配到笔记 · 请尝试其他关键词`;
+        } else {
+            const totalOriginalAll = categories.reduce((sum, cat) => sum + cat.files.length, 0);
+            footerDiv.innerHTML = `📖 当前展示 ${totalVisibleFiles} 条笔记 (共 ${totalOriginalAll} 条) · 点击分类标题可折叠/展开 · 支持实时搜索`;
+        }
+    }
+    
+    // 简易防XSS
+    function escapeHtml(str) {
+        return str.replace(/[&<>]/g, function(m) {
+            if (m === '&') return '&amp;';
+            if (m === '<') return '&lt;';
+            if (m === '>') return '&gt;';
+            return m;
+        }).replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]/g, function(c) {
+            return c;
+        });
+    }
+    
+    // 初始化搜索交互
+    const searchInput = document.getElementById("searchInput");
+    let debounceTimer;
+    searchInput.addEventListener("input", function() {
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(() => {
+            renderCategories(this.value);
+        }, 180);
+    });
+    
+    // 初次渲染
+    renderCategories();
+    
+    // 添加友好的控制台提示（帮助定位真实目录）
+    console.log("📘 IITC-AIESG 学习目录已启动 | 18个分类全部载入，笔记路径基于相对目录，请确保notes文件夹结构与生成路径匹配。");
+    console.log("提示: 若需真实笔记可依据分类模板创建对应html文件，当前为完整导航系统。");
+    
+    // 可选：如果用户点击链接文件不存在，不报错UI层面优雅提示(原生链接将会导致404但不影响目录)
+    // 增强体验: 拦截部分链接错误弹出软提醒（可选，但保持原生行为更符合预期）
+    document.addEventListener("click", function(e) {
+        let target = e.target.closest("a");
+        if (target && target.href && target.href.includes(".html")) {
+            // 仅做可选的404预检？不干扰原逻辑，仅仅保留真实跳转
+            // 让浏览器自然跳转即可；也可以不做额外处理。
+        }
+    });
+</script>
+</body>
+</html>
