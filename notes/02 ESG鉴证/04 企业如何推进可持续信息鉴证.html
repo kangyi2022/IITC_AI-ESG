@@ -2,299 +2,381 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ESG鉴证实操：企业如何推进可持续信息鉴证 | 品职教育</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>ESG鉴证实操 | 企业推进可持续信息鉴证全案 | 品职教育</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
-            background: #eef2f5;
-            font-family: 'Segoe UI', Roboto, 'Noto Sans', system-ui, sans-serif;
-            padding: 40px 24px;
-            color: #1a2a3f;
+            background: #eef3f0;
+            font-family: 'Segoe UI', Roboto, 'Noto Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+            padding: 40px 20px;
+            color: #1a2f24;
             line-height: 1.5;
         }
+
         .container {
-            max-width: 1300px;
+            max-width: 1400px;
             margin: 0 auto;
             background: white;
-            border-radius: 32px;
-            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.1);
-            padding: 44px 48px;
-            transition: 0.2s;
+            border-radius: 2rem;
+            box-shadow: 0 25px 45px -12px rgba(0, 32, 0, 0.2);
+            padding: 2rem 2.2rem;
+            transition: all 0.2s;
         }
+
         @media (max-width: 700px) {
-            .container { padding: 24px 20px; }
+            .container {
+                padding: 1.5rem 1rem;
+            }
         }
+
         h1 {
-            font-size: 2rem;
-            color: #1c6e2f;
-            border-left: 6px solid #2b7e3a;
-            padding-left: 20px;
+            font-size: 1.9rem;
+            color: #1b6e2f;
+            border-left: 6px solid #2a8e3f;
+            padding-left: 1.2rem;
             margin-bottom: 0.5rem;
+            font-weight: 700;
         }
-        .sub {
-            color: #4a6b4f;
+
+        .subhead {
+            color: #3b6a48;
             margin-bottom: 2rem;
-            border-bottom: 1px solid #dce5e0;
+            border-bottom: 2px solid #d9e8dd;
             padding-bottom: 0.75rem;
+            font-size: 1rem;
         }
+
         h2 {
             font-size: 1.7rem;
-            margin: 1.8rem 0 1rem 0;
-            color: #1f572d;
-            font-weight: 600;
-            background: linear-gradient(135deg, #1f572d, #348a47);
+            margin: 2rem 0 1rem 0;
+            color: #1c5e2c;
+            font-weight: 700;
+            background: linear-gradient(135deg, #1e642e, #328a46);
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
-            border-left: 4px solid #2b7e3a;
-            padding-left: 16px;
+            border-left: 5px solid #2a8e3f;
+            padding-left: 1rem;
         }
+
         h3 {
             font-size: 1.4rem;
-            margin: 1.5rem 0 0.8rem 0;
-            color: #235f33;
+            margin: 1.6rem 0 0.8rem;
+            color: #246c38;
             font-weight: 600;
         }
+
         h4 {
             font-size: 1.2rem;
             margin: 1rem 0 0.5rem;
-            color: #2d6b40;
+            color: #2a7640;
         }
-        .highlight {
-            background: #eef9e4;
-            border-left: 4px solid #2b7e3a;
-            padding: 14px 20px;
-            border-radius: 18px;
-            margin: 1rem 0;
+
+        .highlight-box {
+            background: #eef9e7;
+            border-left: 5px solid #2a8e3f;
+            padding: 1rem 1.5rem;
+            border-radius: 20px;
+            margin: 1.2rem 0;
             font-weight: 500;
         }
+
         .key-point {
-            background: #fff6e5;
-            border-left: 4px solid #e6a017;
-            padding: 14px 20px;
-            border-radius: 18px;
+            background: #fff7e8;
+            border-left: 5px solid #e6a017;
+            padding: 1rem 1.5rem;
+            border-radius: 20px;
             margin: 1.2rem 0;
         }
-        .badge {
-            background: #2b7e3a20;
-            color: #1c572a;
+
+        .badge-green {
+            background: #e0f0e2;
+            color: #1c5e2c;
             font-weight: 700;
-            padding: 3px 10px;
+            padding: 3px 12px;
             border-radius: 40px;
             font-size: 0.7rem;
             display: inline-block;
-            margin-right: 8px;
+            margin-right: 0.5rem;
+            letter-spacing: 0.3px;
         }
+
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 1.2rem 0;
+            margin: 1.3rem 0;
             font-size: 0.92rem;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+            border-radius: 16px;
+            overflow: hidden;
         }
+
         th {
-            background: #e1f0e2;
+            background: #ddede2;
             padding: 12px 12px;
-            border: 1px solid #cbdcc9;
+            border: 1px solid #c0d9c0;
             text-align: left;
             font-weight: 700;
         }
+
         td {
-            border: 1px solid #dee4e8;
+            border: 1px solid #dde6e1;
             padding: 10px 12px;
             vertical-align: top;
-            background: white;
+            background: #ffffff;
         }
+
         .case-box {
-            background: #fbfef7;
-            border: 1px solid #cee0c9;
-            border-radius: 24px;
+            background: #fafef7;
+            border: 1px solid #cfe3ca;
+            border-radius: 28px;
             padding: 1.3rem 1.8rem;
             margin: 1.8rem 0;
-            box-shadow: 0 6px 12px -8px rgba(0,0,0,0.05);
+            box-shadow: 0 8px 18px -10px rgba(0, 0, 0, 0.05);
         }
+
         .flow-list {
             list-style: none;
             margin: 0.8rem 0;
         }
+
         .flow-list li {
             margin-bottom: 10px;
-            padding-left: 24px;
+            padding-left: 26px;
             position: relative;
         }
+
         .flow-list li:before {
-            content: "▹";
-            color: #2b7e3a;
+            content: "🌱";
+            color: #2a8e3f;
             position: absolute;
-            left: 4px;
+            left: 0;
+            font-size: 0.9rem;
         }
+
         .btn-download {
-            background: #1f5e2c;
+            background: #1f682e;
             color: white;
             border: none;
-            border-radius: 40px;
-            padding: 12px 28px;
+            border-radius: 50px;
+            padding: 12px 32px;
             font-size: 1rem;
             font-weight: 600;
             cursor: pointer;
             transition: 0.2s;
-            margin-top: 30px;
-            display: inline-block;
+            margin-top: 32px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
         }
+
         .btn-download:hover {
-            background: #0f401b;
+            background: #0f4e20;
             transform: translateY(-2px);
         }
+
         hr {
-            margin: 28px 0;
+            margin: 2rem 0;
             border: 0;
             height: 1px;
             background: linear-gradient(to right, #cbdad5, transparent);
         }
-        .footnote {
-            background: #f8fafb;
+
+        .footnote-note {
+            background: #f2f9f2;
             font-size: 0.85rem;
-            padding: 10px 16px;
-            border-radius: 14px;
-            margin-top: 16px;
+            padding: 12px 20px;
+            border-radius: 20px;
+            margin-top: 20px;
+            color: #2c523a;
         }
     </style>
 </head>
 <body>
-<div class="container" id="esgImplementContent">
-    <h1>🏭 ESG鉴证 · 企业如何推进可持续信息鉴证</h1>
-    <div class="sub">基于ISAE/ISSA 5000/AA1000标准 | 内部能力构建、数据流程准备、案例演绎与落地路线图</div>
+<div class="container" id="esgRootContent">
+    <h1>🌿 ESG鉴证实操 · 企业如何推进可持续信息鉴证</h1>
+    <div class="subhead">基于ISSA 5000 / AA1000标准 · 内部能力+数据体系+案例闭环 · 品职教育 何旋主讲</div>
 
-    <!-- 第一部分：企业如何推动 -->
-    <h2>📌 一、企业推动可持续信息鉴证的核心要点</h2>
-    <div class="highlight">
-        <strong>🔍 鉴证机构关注的四大维度（企业必须理解）</strong><br>
-        1️⃣ <strong>可持续信息本身的质量与合规性</strong>：是否按标准编制、重大性判断是否合理、估计与前瞻信息假设是否一致。<br>
-        2️⃣ <strong>内部控制体系</strong>：数据收集、处理、汇总、报告的全流程控制，治理层监督有效性。<br>
-        3️⃣ <strong>鉴证前提与范围</strong>：是否具备适当流程识别信息、采用标准是否适当(相关性/完整性/可靠性/中立性/可理解性)。<br>
-        4️⃣ <strong>管理层责任声明</strong>：书面声明的可靠性是鉴证基础。
+    <!-- ========================= 第一部分：企业推动核心要点 ========================= -->
+    <h2>📌 一、鉴证机构关注的四大维度（企业必须理解）</h2>
+    <div class="highlight-box">
+        <strong>🔍 鉴证核心四个维度</strong><br>
+        1️⃣ <strong>可持续信息本身的质量与合规性</strong>：是否按照既定标准（如企业可持续披露准则）编制，重大性判断是否合理，估计与前瞻信息假设是否一致。<br>
+        2️⃣ <strong>支撑信息生成的内部控制体系</strong>：数据收集、处理、汇总、报告全流程控制，治理层监督职能有效性。<br>
+        3️⃣ <strong>鉴证业务的前提与范围</strong>：企业是否具备适当流程识别信息、采用标准是否适当（相关性/完整性/可靠性/中立性/可理解性）。<br>
+        4️⃣ <strong>管理层与治理层的责任声明</strong>：书面声明的可靠性是鉴证重要基础。
     </div>
 
-    <h3>🏗️ 系统性鉴证准备五步法（关键落地框架）</h3>
+    <!-- 系统性鉴证准备（细化五步法并扩展列示准备阶段核心）按照需求：1.双重重要性单独列，2.增加前瞻性与价值链，3.增加选择胜任机构与保证程度，4.增加响应鉴证程序 -->
+    <h2>🏗️ 系统性鉴证准备：七项关键落地框架（基于PDF准备阶段深化）</h2>
+    <div class="key-point">
+        <strong>💡 预备说明</strong>：以下准备框架融合“内部能力构建+数据流程+前瞻性与价值链+外部协作+鉴证响应+闭环沟通”，其中特别强调“双重重要性单列”以及“前瞻性与价值链信息应对”，完全依照PDF原文要求（第5-8页核心行动精炼）。
+    </div>
     <table>
-        <thead><tr><th>阶段</th><th>核心工作</th><th>具体行动与要点</th></tr></thead>
+        <thead>
+            <tr><th style="width:18%">准备阶段</th><th style="width:38%">核心工作</th><th style="width:44%">具体行动与要点（含新增专项）</th></tr>
+        </thead>
         <tbody>
-            <tr><td rowspan="2">1. 内部能力构建</td><td>建立治理架构</td><td>成立ESG管理委员会（董事会/高管牵头），统筹财务、环境、供应链等部门。</td></tr>
-            <tr><td>复合人才与培训</td><td>招聘财务+环境+法律背景人才，全员ESG基础培训，理解“双重重要性”。</td></tr>
-            <tr><td rowspan="2">2. 数据与流程准备</td><td>评估与管理基础</td><td>检视现有数据收集、核算、文档是否规范可验证。<span class="badge">重难点</span></td></tr>
-            <tr><td>完善内控体系</td><td>对关键指标（如温室气体排放）建立全流程内控；保留证据链；应对舞弊风险；应用重要性原则；一致性披露。</td></tr>
-            <tr><td>3. 外部协作准备</td><td>确认鉴证前提</td><td>对照准则评估是否满足鉴证条件；明确披露标准（GRI/ISSB等）。</td></tr>
-            <tr><td>4. 应对评估与测试</td><td>配合风险评估与程序</td><td>介绍业务及ESG风险，开放访谈；高效提供抽样证据；配合控制测试；妥善沟通错报。</td></tr>
-            <tr><td>5. 最终闭环与报告</td><td>声明与复核</td><td>按时签署管理层书面声明；复核鉴证报告草稿，确保事实准确。</td></tr>
+            <!-- 1. 内部能力构建 (含双重重要性 单列强调) -->
+            <tr>
+                <td rowspan="2">1. 内部能力构建</td>
+                <td>建立治理架构</td>
+                <td>成立由董事会或高级管理层牵头的ESG/可持续发展管理委员会，统筹财务、环境、供应链等跨部门工作。</td>
+            </tr>
+            <tr>
+                <td><strong class="badge-green">★ 双重重要性单独列示</strong><br>理解“重要性”与“双重重要性”</td>
+                <td>学习并建立内部流程，以评估对投资者决策（财务重要性）及对环境社会影响（影响重要性）都至关重要的议题。这是鉴证的关键评估点，需书面记录重大性分析过程及利益相关方参与证据。</td>
+            </tr>
+            <!-- 2. 数据与流程准备 + 新增“应对前瞻性与价值链”作为独立列示，按原文要求增加在核心工作中-->
+            <tr>
+                <td rowspan="3">2. 数据与流程准备</td>
+                <td>评估数据与管理基础</td>
+                <td>检视现有ESG数据的收集、核算、内控和文档流程是否规范、可验证；对温室气体排放等关键定量指标开展差距分析。</td>
+            </tr>
+            <tr>
+                <td>搭建或完善内控体系 & 保留证据链</td>
+                <td>针对关键指标建立从数据产生、收集、处理到报告的全流程内控制度；保留证据源记录、计算过程、审批记录；建立舞弊防范机制；保持披露政策一致性。</td>
+            </tr>
+            <tr>
+                <td><strong>✔ 应对前瞻性与价值链信息</strong><br>（新增核心工作）</td>
+                <td>审慎处理估计：对气候目标、减排路径等前瞻性信息记录关键假设、模型依据及敏感性分析；对供应链范围三、价值链信息建立数据获取与合作机制，确保数据可验证。</td>
+            </tr>
+            <!-- 3. 外部协作准备 增加选择具备胜任能力的鉴证机构+明确保证程度与范围 -->
+            <tr>
+                <td rowspan="2">3. 外部协作准备</td>
+                <td>确认鉴证前提 & 明确披露标准</td>
+                <td>对照相关鉴证准则评估是否满足鉴证业务条件；明确并固定编制报告所使用的披露标准（如GRI、ISSB准则等）。</td>
+            </tr>
+            <tr>
+                <td><strong>🤝 选择具备胜任能力的鉴证机构 & 明确保证程度与范围</strong></td>
+                <td>关注机构是否建立专门质量管理体系（如ISQM1），团队须具备跨学科可持续信息鉴证能力；与鉴证机构商议合理保证/有限保证，确定是否对全部或部分信息进行鉴证，并写入业务约定书。</td>
+            </tr>
+            <!-- 4. 应对评估与测试 增加“响应鉴证程序”作为核心工作列示 -->
+            <tr>
+                <td rowspan="2">4. 应对评估与测试</td>
+                <td>配合风险评估</td>
+                <td>向鉴证团队系统介绍公司业务、ESG风险、战略及报告流程；开放安排治理层、管理层访谈。</td>
+            </tr>
+            <tr>
+                <td><strong>⚡ 响应鉴证程序</strong>（新增专项）</td>
+                <td>快速准确响应鉴证机构的询问和抽样检查请求；配合控制测试，演示关键内控运行并提供记录；妥善沟通错报，及时解释或更正差异。</td>
+            </tr>
+            <!-- 5. 最终闭环与报告不变 -->
+            <tr>
+                <td>5. 最终闭环与报告</td>
+                <td>声明与沟通 & 复核报告</td>
+                <td>按时提供管理层/治理层书面声明，确认责任履行；保持重大事项透明沟通；仔细复核鉴证报告草稿，确保事实陈述准确。</td>
+            </tr>
         </tbody>
     </table>
-    <div class="key-point">
-        <strong>⭐ 重难点：双重重要性（财务重要性 + 影响重要性）</strong> — 企业需要建立内部流程来评估对投资者决策及对环境/社会影响的重大议题，这是鉴证评估的关键核心。
+    <div class="highlight-box">
+        <strong>📌 重难点总结——双重重要性落地</strong>：企业需要生成《重大议题矩阵》及影响重要性评估文档，作为鉴证机构必查项；同时前瞻性信息（如净零承诺）与范围三数据是当前监管及鉴证高频缺陷领域。
     </div>
 
-    <!-- 案例演绎 Nass 能源集团 -->
-    <h2>📖 二、案例演绎：能源企业 Nass 主动推进合理保证鉴证</h2>
+    <!-- ========= 案例演绎 Nass能源集团 ========= -->
+    <h2>📖 二、案例演绎：跨国能源企业Nass主动寻求合理保证鉴证</h2>
     <div class="case-box">
         <h4>🔹 背景与动因</h4>
-        <p>跨国能源供应商Nass发布《2025年可持续发展报告》后，董事会主动聘请顶级机构对报告核心内容进行<strong>合理保证鉴证</strong>，回应“漂绿”风险，提升公信力。</p>
-        <h4>🔹 鉴证范围与机构选择</h4>
-        <p>专项小组选定“恒信鉴证”，明确鉴证六大板块：碳排放减少、社区投资、高管薪酬与ESG挂钩、供应链审计、废物管理、领导层多样性，提供<strong>合理保证</strong>。</p>
-        <h4>🔹 关键发现（需修正事项）</h4>
-        <ul>
-            <li><strong>供应链审计覆盖率</strong>：报告称92%供应商接受审计，实际按统一标准为78% (统计口径不一致)。</li>
-            <li><strong>废物回收率偏差</strong>：报告90%回收率，未涵盖第三方承包商数据，实际76%。</li>
-            <li><strong>多样性统计偏差</strong>：“高级领导层”占比报告中32%，按全球框架定义实际为28%。</li>
+        <p>作为立志成为行业可持续发展领导者的跨国能源供应商，Nass发布《2025年可持续发展报告》后，董事会及高管层为回应“漂绿”风险，主动聘请顶级第三方机构对报告核心内容进行<strong>合理保证鉴证</strong>，确立公信力。</p>
+        <h4>🔹 审慎选择与明确范围</h4>
+        <p>由CFO、可持续发展官等组成专项小组，选定“恒信鉴证”（具备能源行业专精经验），在业务约定书中清晰界定六大板块：碳排放减少、社区投资、高管薪酬与ESG挂钩、供应链审计、废物管理、领导层多样性，并明确提供<strong>合理保证</strong>。</p>
+        <h4>🔹 鉴证关键发现（需修正领域）</h4>
+        <ul style="margin-left: 1.2rem;">
+            <li><strong>供应链审计覆盖率夸大</strong>：报告92%供应商已审计，按统一标准实际78%（小型供应商审计延期）。</li>
+            <li><strong>废物回收率偏差</strong>：报告90%回收率未涵盖第三方承包商数据，综合回收率实际76%。</li>
+            <li><strong>多样性统计口径偏差</strong>：“高级领导层”占比报告32%，按全球框架定义实际为28%。</li>
         </ul>
-        <h4>🔹 系统性改进——“灯塔计划”</h4>
-        <p>📌 成立跨部门ESG数据治理委员会；统一指标定义与收集规程；供应链/废物管理承包商强制现场审计；投资ESG数据管理平台，实现源头线上化。</p>
-        <div class="highlight" style="margin-top: 8px;">✅ 成果：获得有限保证意见（但三项调整事项仍非重大），显著降低ESG风险溢价，驱动内部治理升级，从被动合规转向战略性信任投资。</div>
+        <h4>🔹 管理层响应与“灯塔计划”系统性改进</h4>
+        <p>成立跨部门ESG数据治理委员会，统一指标定义与数据收集规程；建立书面化操作手册；对供应链及废物管理承包商升级为强制性现场审计+文档核查；投资引入ESG数据管理平台，实现源头自动采集与线上留痕。</p>
+        <div class="highlight-box" style="margin-top: 0.6rem;">✅ 成果：获得有限保证意见（尽管三项非重大调整），显著降低ESG风险溢价，推动内部治理升级，将鉴证从合规成本转为战略性信任投资。</div>
     </div>
 
-    <!-- 第二部分：基于鉴证标准的企业落地工作 -->
-    <h2>⚙️ 三、基于鉴证标准的企业落地工作（ISSA 5000 + AA1000）</h2>
-    <h3>📌 基于ISSA 5000 鉴证的全流程企业配合路线</h3>
+    <!-- ========= 基于鉴证标准落地：ISSA 5000 & AA1000 核心配合流程 ========= -->
+    <h2>⚙️ 三、基于ISSA 5000的全流程企业配合落地路线</h2>
     <table>
-        <thead><tr><th>阶段</th><th>ISSA 5000 鉴证流程要点（机构侧）</th><th>企业配合落地关键动作</th><th>核心交付物</th></tr></thead>
+        <thead><tr><th>阶段</th><th>ISSA 5000流程要点（机构侧）</th><th>企业配合落地关键动作</th><th>核心交付物/目标</th></tr></thead>
         <tbody>
-            <tr><td>第一阶段：准备与承接</td><td>评估前提条件、胜任能力、独立性；签订约定书</td><td>内部明确保证程度(L/R)，选定框架；配合提交内控自评、历史处罚资料；审议签署业务约定书</td><td>《鉴证服务协议》《框架适用性备忘录》</td></tr>
-            <tr><td>第二阶段：计划与评估</td><td>制定重要性水平；了解环境与内控，识别重大错报风险</td><td>联合制定项目计划表；系统介绍业务、ESG风险与流程；提供内控流程图等资料</td><td>《ESG鉴证项目计划表》《风险评估资料》</td></tr>
-            <tr><td>第三阶段：执行与测试</td><td>控制测试+实质性程序；获取证据；处理错报；期后事项</td><td>安排访谈，提供“四件套”（发票、监测报告、合同、确认函）；确认《错报汇总表》并及时更正；更新期后事项表</td><td>《鉴证证据包》《错报汇总表》</td></tr>
-            <tr><td>第四阶段：结论与报告</td><td>获取书面声明；质量复核；出具鉴证报告</td><td>签署《管理层声明书》；交叉核对年报信息；复核报告草稿，确认正式发布</td><td>签署的《管理层声明书》、正式《鉴证报告》</td></tr>
+            <tr><td>第一阶段：准备与承接</td><td>评估前提条件，胜任能力、独立性，签订业务约定书</td><td>明确保证程度(L/R)及选定框架；提交内控自评、历史处罚资料；审议并签订《鉴证服务协议》</td><td>《鉴证服务协议》《框架适用性备忘录》</td></tr>
+            <tr><td>第二阶段：计划与评估</td><td>制定重要性水平，了解环境与内控，识别重大错报风险</td><td>联合制定详细项目计划表；系统介绍业务、ESG风险及数据流程；提供内控流程图、控制矩阵</td><td>《ESG鉴证项目计划表》《风险评估资料》</td></tr>
+            <tr><td>第三阶段：执行与测试</td><td>控制测试+实质性程序，获取证据，处理错报，期后事项</td><td>安排访谈，提供“四件套”(发票、监测报告、合同、确认函)；确认《错报汇总表》并及时更正；滚动更新期后事项表</td><td>完整《鉴证证据包》《错报汇总表》</td></tr>
+            <tr><td>第四阶段：结论与报告</td><td>获取书面声明，质量复核，出具鉴证报告</td><td>签署《管理层声明书》；交叉核对年报等其他信息；复核报告草稿，确认正式发布</td><td>签署的《管理层声明书》、正式《鉴证报告》</td></tr>
         </tbody>
     </table>
 
-    <h3>📋 ISSA 5000 详细要求与企业关键行动（重点摘录）</h3>
+    <h3>📌 ISSA 5000 关键条目与企业实战动作（证据链/错报/舞弊）</h3>
     <table>
-        <thead><tr><th>主题</th><th>对应条目（要求）</th><th>企业配合落地关键动作</th></tr></thead>
+        <thead><tr><th>主题/条目范围</th><th>对机构要求</th><th>企业配合落地关键动作（原文提炼）</th></tr></thead>
         <tbody>
-            <tr><td>鉴证业务的承接与保持</td><td>26-29</td><td>企业需提交内控成熟度自评表、历史处罚清单，配合独立性评估。</td></tr>
-            <tr><td>舞弊与违法违规</td><td>64-67</td><td>主动披露环保处罚、员工举报记录，保持职业怀疑。</td></tr>
-            <tr><td>证据要求</td><td>89-94</td><td>提供原始+第三方证据：发票、监测报告、合同、确认函“四件套”。<span class="badge">重难点</span></td></tr>
-            <tr><td>风险评估与错报累积</td><td>103-161</td><td>输出《风险清单》打分；所有错报台账化，使用《错报汇总表》确认是否调整。</td></tr>
-            <tr><td>书面声明</td><td>165-170</td><td>管理层/治理层签署《管理层声明书》，确认信息真实性和责任履行。</td></tr>
-            <tr><td>期后事项</td><td>163-164</td><td>建立“期后事项监控表”，滚动更新直至报告日。</td></tr>
+            <tr><td>承接与保持（26-29）</td><td>评估胜任能力、独立性、客户诚信</td><td>提交内控成熟度自评表、历史处罚清单，配合独立性评估</td></tr>
+            <tr><td>舞弊与违法违规（64-67）</td><td>保持职业怀疑，识别舞弊及NOCLAR</td><td>主动披露环保处罚、员工举报记录，配合异常事项调查</td></tr>
+            <tr><td>证据要求（89-94）</td><td>充分且适当，定量定性+原始第三方</td><td>提供发票、监测报告、合同、确认函“四件套”，确保完整佐证链</td></tr>
+            <tr><td>风险评估与错报累积（103-161）</td><td>识别重大错报风险，错报台账化评估</td><td>输出《风险清单》并打分；使用《错报汇总表》确认是否调整</td></tr>
+            <tr><td>书面声明（165-170）</td><td>治理层/管理层书面确认责任与信息真实性</td><td>签署标准《管理层声明书》，明确信息完整性及内控责任</td></tr>
+            <tr><td>期后事项（163-164）</td><td>报告日至鉴证报告日重大事项需更新</td><td>建立“期后事项监控表”每日滚动更新直至报告发出</td></tr>
         </tbody>
     </table>
-    <div class="key-point">
-        <strong>🔔 关键难点：ISSA 5000 要求企业配合建立“可重复、可复核”的证据底稿，并且特别强调价值链数据（范围三）及前瞻性信息的估计假设记录。</strong>
-    </div>
 
-    <h3>🔄 基于AA1000的鉴证流程与企业对应行动</h3>
+    <!-- AA1000流程对比+企业行动 -->
+    <h2>🔄 四、基于AA1000鉴证流程与企业协同行动</h2>
     <table>
         <thead><tr><th>阶段</th><th>鉴证机构流程</th><th>企业落地行动</th></tr></thead>
         <tbody>
-            <tr><td>阶段一：先决条件</td><td>独立性评估、审验协议签订</td><td>配合独立性审查；清晰界定鉴证目标与期望；参与协议签订</td></tr>
-            <tr><td>阶段二：审验计划</td><td>界定范围与重点，选择类型与深度(类型I/II, 中度/深度)</td><td>组建专业团队，准备管理流程及证据材料</td></tr>
-            <tr><td>阶段三：审验过程</td><td>访谈、证据审查、原则符合性评估（包容性/实质性/回应性/影响性）</td><td>协调访谈，开放文件，展示重大议题识别成果及利益相关方回应行动</td></tr>
-            <tr><td>阶段四：报告与跟进</td><td>发布审验声明，提供管理层深度报告</td><td>公示声明，研读内部报告制定改进措施，建立“审验-改进-重验”闭环</td></tr>
+            <tr><td>阶段一：先决条件</td><td>独立性评估、审验协议签订</td><td>配合独立性审查；清晰界定鉴证目标与期望；参与协议商定</td></tr>
+            <tr><td>阶段二：审验计划</td><td>界定范围与重点，选择类型I/II及深度</td><td>组建专业团队，梳理管理流程及证据材料，准备利益相关方清单</td></tr>
+            <tr><td>阶段三：审验过程</td><td>访谈、证据审查、AA1000四项原则符合性评估</td><td>协调内外部访谈，开放数据，展示重大议题识别成果及回应行动记录</td></tr>
+            <tr><td>阶段四：报告与跟进</td><td>发布审验声明并提供管理层深度报告</td><td>公示声明，研读内部报告制定改进措施，建立“审验-改进-重验”闭环</td></tr>
         </tbody>
     </table>
-
-    <h3>⚖️ 核心差异对比：AA1000 vs ISSA 5000（重难点总结）</h3>
-    <div class="highlight">
-        <strong>🎯 AA1000 原则与过程导向：</strong> 聚焦组织是否遵循包容性、实质性、回应性、影响性四项原则，强调管理体系过程的健全性，结论形式为审验声明（对原则符合度及绩效可靠性）。企业关键行动：构建并证明健全的“过程”，提供大量定性证据（会议纪要、沟通记录等）。<br><br>
-        <strong>📐 ISSA 5000 信息与结论导向：</strong> 类似于财务审计逻辑，聚焦特定可持续信息是否存在重大错报，保证程度分“有限保证”与“合理保证”。企业需为每个关键数据点建立清晰、可追溯的证据链（底稿思维），强化数据治理与内部控制测试。
-    </div>
     <div class="key-point">
-        <strong>📌 落地建议：</strong> 若企业侧重利益相关方参与及管理原则的成熟度，优先参考AA1000流程；若侧重定量数据的鉴证可信度（如碳排放、财务挂钩指标），则ISSA 5000框架下的证据链与内控测试是重点。
+        <strong>🎯 核心差异总结（AA1000 vs ISSA 5000）</strong><br>
+        ✔ <strong>AA1000原则过程导向</strong>：聚焦包容性、实质性、回应性、影响性，强调管理体系健全性，需提供会议纪要、沟通记录等定性证据；结论为审验声明。<br>
+        ✔ <strong>ISSA 5000信息结论导向</strong>：类似财务审计，针对特定可持续信息是否存在重大错报，保证程度分为有限/合理保证；企业需构建可追溯证据链（底稿思维）和内控测试体系。
     </div>
 
-    <!-- 重要公式或框架 -->
-    <h2>📐 附：重要概念框架（无复杂公式但需掌握的逻辑）</h2>
-    <ul style="margin-left: 1.6rem;">
-        <li><strong>保证程度层级</strong>：合理保证 &gt; 有限保证（程序范围与证据量不同，结论表述不同：积极vs消极）。</li>
-        <li><strong>鉴证风险模型（概念）</strong>：鉴证风险 = 重大错报风险 × 检查风险。</li>
-        <li><strong>双重重要性矩阵评估</strong>：财务重要性（外向内） + 影响重要性（内向外），企业须内部识别并记录。</li>
-        <li><strong>鉴证覆盖率指标</strong>：经鉴证的关键议题数量 / 企业实质性议题总数 — 用于投资者评估范围完整性。</li>
+    <!-- 重要概念以及额外落地提醒 但不虚构 -->
+    <h2>📐 五、重要概念与鉴证进阶逻辑（非公式但需深度理解）</h2>
+    <ul style="margin-left: 1.6rem; margin-bottom: 1rem;">
+        <li><strong>保证程度层级</strong>：合理保证 &gt; 有限保证（程序范围与证据数量差异，结论积极vs消极表述）。</li>
+        <li><strong>双重重要性矩阵</strong>：财务重要性（外向内）+ 影响重要性（内向外），企业须内部识别并输出文档化重要性评估过程。</li>
+        <li><strong>前瞻性信息敏感性</strong>：气候情境假设、减排目标测算模型需完整记录假设与参数，否则易被认定为错报风险。</li>
+        <li><strong>价值链（范围三）数据管理</strong>：建立供应商数据采集机制，通过合同条款约定数据提报标准，保留第三方确认函。</li>
     </ul>
-    <div class="footnote">
-        📢 注：以上内容严格基于《ESG鉴证-实操-企业如何推进可持续信息鉴证》课程讲义整理（品职教育 何旋主讲）。涵盖准备五步法、Nass案例、ISSA 5000流程及AA1000差异，未作虚构，所有重难点均已标注。
+    <div class="footnote-note">
+        📢 依据《ESG鉴证-实操-企业如何推进可持续信息鉴证》品职教育课程材料（何旋主讲）系统整理。涵盖：企业鉴证准备框架（双重重要性单列、前瞻性与价值链应对、选择胜任机构及明确保证程度、响应鉴证程序）、Nass案例、ISSA 5000与AA1000流程对比。所有内容均基于PDF原文核心信息，无虚构。
     </div>
-    <hr>
-    <div style="display: flex; justify-content: center; margin-top: 0.5rem;">
-        <button class="btn-download" id="downloadImplementBtn">📥 下载 Markdown 格式 (.md)</button>
+    <hr />
+    <div style="display: flex; justify-content: center; margin-top: 0.8rem;">
+        <button class="btn-download" id="downloadMarkdownBtn">📄 下载完整Markdown笔记 (.md)</button>
     </div>
 </div>
 
 <script>
     (function() {
-        function generateMarkdown() {
-            // 基于 id="esgImplementContent" 内容生成 markdown，保留完整结构与重难点。
-            const container = document.getElementById('esgImplementContent');
-            const clone = container.cloneNode(true);
-            // 移除按钮区域避免干扰
-            const btns = clone.querySelectorAll('.btn-download');
-            btns.forEach(btn => btn.remove());
+        function extractMarkdownFromDOM() {
+            const container = document.getElementById('esgRootContent');
+            const cloneContainer = container.cloneNode(true);
+            // 移除按钮区域 避免干扰
+            const downloadBtn = cloneContainer.querySelector('#downloadMarkdownBtn');
+            if (downloadBtn) {
+                const parentDiv = downloadBtn.closest('div');
+                if (parentDiv && parentDiv.parentNode) parentDiv.remove();
+                else downloadBtn.remove();
+            }
+            // 移除可能的button遗留
+            const allBtns = cloneContainer.querySelectorAll('.btn-download');
+            allBtns.forEach(btn => btn.remove());
+
+            let md = `# ESG鉴证实操 · 企业如何推进可持续信息鉴证\n\n`;
+            md += `> 基于ISSA 5000 / AA1000标准 | 内部能力构建、数据准备、Nass案例演绎及鉴证配合流程\n\n`;
             
-            let md = `# ESG鉴证实操：企业如何推进可持续信息鉴证\n\n`;
-            md += `> 依据品职教育课程 | 内部能力构建 · Nass案例演绎 · ISSA 5000/AA1000落地流程\n\n`;
-            
-            function nodeToMarkdown(node, indent = 0) {
+            function convertNodeToMarkdown(node, indentLevel = 0) {
                 let result = '';
                 if (!node) return '';
                 if (node.nodeType === Node.TEXT_NODE) {
@@ -305,7 +387,6 @@
                 const tag = node.tagName ? node.tagName.toLowerCase() : '';
                 if (tag === 'script' || tag === 'style') return '';
                 
-                // 处理标题
                 if (tag === 'h1') {
                     result += `# ${node.innerText.trim()}\n\n`;
                 } else if (tag === 'h2') {
@@ -319,32 +400,33 @@
                     if (txt) result += `${txt}\n\n`;
                 } else if (tag === 'div') {
                     let cls = node.className || '';
-                    // 特殊高亮块
-                    if (cls.includes('highlight')) {
-                        result += `> **✨ ${node.innerText.trim()}**\n\n`;
+                    if (cls.includes('highlight-box')) {
+                        result += `> ✨ ${node.innerText.trim()}\n\n`;
                     } else if (cls.includes('key-point')) {
-                        result += `> 📌 **要点**：${node.innerText.trim()}\n\n`;
+                        result += `> 📌 **关键提示**：${node.innerText.trim()}\n\n`;
                     } else if (cls.includes('case-box')) {
-                        result += `<details><summary>📘 案例详情</summary>\n\n${node.innerText.trim()}\n\n</details>\n\n`;
+                        result += `<details>\n<summary>📘 Nass案例详情</summary>\n\n${node.innerText.trim()}\n\n</details>\n\n`;
+                    } else if (cls.includes('footnote-note')) {
+                        result += `*${node.innerText.trim()}*\n\n`;
                     } else {
-                        for (let child of node.childNodes) result += nodeToMarkdown(child, indent);
+                        for (let child of node.childNodes) result += convertNodeToMarkdown(child, indentLevel);
                     }
                 } else if (tag === 'ul' || tag === 'ol') {
-                    let items = node.querySelectorAll(':scope > li');
+                    const items = node.querySelectorAll(':scope > li');
                     for (let li of items) {
                         let prefix = (tag === 'ul') ? '- ' : '1. ';
                         result += `${prefix}${li.innerText.trim()}\n`;
                     }
                     result += `\n`;
                 } else if (tag === 'table') {
-                    let rows = node.querySelectorAll('tr');
+                    const rows = node.querySelectorAll('tr');
                     if (rows.length) {
                         rows.forEach((row, idx) => {
-                            let cells = row.querySelectorAll('th, td');
-                            let line = cells.map(cell => cell.innerText.trim().replace(/\n/g, ' ')).join(' | ');
+                            const cells = row.querySelectorAll('th, td');
+                            const line = Array.from(cells).map(cell => cell.innerText.trim().replace(/\n/g, ' ')).join(' | ');
                             result += `| ${line} |\n`;
                             if (idx === 0 && row.querySelector('th')) {
-                                let sep = cells.map(() => '---').join(' | ');
+                                const sep = Array(cells.length).fill('---').join(' | ');
                                 result += `| ${sep} |\n`;
                             }
                         });
@@ -352,31 +434,29 @@
                     }
                 } else if (tag === 'hr') {
                     result += `---\n\n`;
-                } else if (tag === 'div' && node.className === 'footnote') {
-                    result += `*${node.innerText.trim()}*\n\n`;
                 } else {
-                    for (let child of node.childNodes) result += nodeToMarkdown(child, indent);
+                    for (let child of node.childNodes) result += convertNodeToMarkdown(child, indentLevel);
                 }
                 return result;
             }
             
-            for (let child of clone.childNodes) {
-                md += nodeToMarkdown(child);
+            for (let child of cloneContainer.childNodes) {
+                md += convertNodeToMarkdown(child);
             }
             md = md.replace(/\n{3,}/g, '\n\n');
-            md += `\n---\n*本文总结基于《企业如何推进可持续信息鉴证》原始材料，包含鉴证准备五步法、Nass案例、ISSA5000流程与AA1000差异对比，重难点包括双重重要性、有限vs合理保证、证据链建设及内控测试。*\n`;
+            md += `\n---\n*整理自《企业如何推进可持续信息鉴证》品职教育课程，涵盖双重重要性单独列示、前瞻性与价值链、鉴证机构选择及响应程序、Nass案例、ISSA5000/AA1000流程对比。*`;
             return md;
         }
         
-        const btn = document.getElementById('downloadImplementBtn');
-        if (btn) {
-            btn.addEventListener('click', () => {
-                const markdown = generateMarkdown();
-                const blob = new Blob([markdown], { type: 'text/markdown;charset=utf-8' });
+        const downloadBtn = document.getElementById('downloadMarkdownBtn');
+        if (downloadBtn) {
+            downloadBtn.addEventListener('click', () => {
+                const markdownContent = extractMarkdownFromDOM();
+                const blob = new Blob([markdownContent], { type: 'text/markdown;charset=utf-8' });
                 const url = URL.createObjectURL(blob);
                 const a = document.createElement('a');
                 a.href = url;
-                a.download = 'ESG_企业如何推进可持续信息鉴证.md';
+                a.download = 'ESG_企业如何推进可持续信息鉴证_完整笔记.md';
                 document.body.appendChild(a);
                 a.click();
                 document.body.removeChild(a);
