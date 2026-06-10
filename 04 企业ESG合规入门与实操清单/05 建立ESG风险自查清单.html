@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>建立ESG风险自查清单 - E/S/G分类详解</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #1e2a3a;
+            background-color: #f4f7f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            padding: 30px 40px;
+        }
+        h1 {
+            text-align: center;
+            color: #0a4b6e;
+            border-bottom: 3px solid #2c9ab3;
+            display: inline-block;
+            width: auto;
+            margin: 0 auto 20px;
+            padding-bottom: 8px;
+        }
+        .title-wrap {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h2 {
+            background-color: #e2f0f5;
+            padding: 8px 16px;
+            border-left: 5px solid #1f7b8c;
+            color: #0a4b6e;
+            margin-top: 30px;
+            border-radius: 0 8px 8px 0;
+        }
+        h3 {
+            color: #1e5a6b;
+            margin-top: 20px;
+            padding-left: 10px;
+            border-left: 3px solid #6fc2d0;
+        }
+        h4 {
+            color: #2c6e7a;
+            margin-top: 15px;
+            margin-bottom: 8px;
+        }
+        .highlight {
+            background-color: #fff7e0;
+            padding: 12px 18px;
+            border-left: 5px solid #f4b942;
+            margin: 20px 0;
+            border-radius: 8px;
+            font-weight: 500;
+        }
+        .important {
+            background-color: #ffefef;
+            border-left: 5px solid #d9534f;
+            padding: 10px 18px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+        .important strong, .highlight strong {
+            color: #c0392b;
+        }
+        .info-box {
+            background-color: #e8f4f8;
+            border-left: 5px solid #3498db;
+            padding: 12px 18px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+        .definition {
+            background-color: #f0f7ee;
+            border-left: 5px solid #27ae60;
+            padding: 12px 18px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+        .step-box {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin: 15px 0;
+            border-left: 5px solid #3498db;
+        }
+        .step-title {
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: #2980b9;
+        }
+        .risk-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 0.85rem;
+        }
+        .risk-table th, .risk-table td {
+            border: 1px solid #ddd;
+            padding: 8px 10px;
+            text-align: left;
+            vertical-align: top;
+        }
+        .risk-table th {
+            background-color: #e2f0f5;
+            font-weight: 600;
+        }
+        .badge {
+            background-color: #2c9ab3;
+            color: white;
+            font-size: 0.7rem;
+            padding: 2px 8px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-right: 8px;
+        }
+        .case-card {
+            background: #fef9f0;
+            border-radius: 12px;
+            padding: 14px 20px;
+            margin: 15px 0;
+            border-top: 4px solid #e67e22;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .case-card h4 {
+            margin-top: 0;
+            margin-bottom: 8px;
+            color: #b85c0b;
+        }
+        .esg-category {
+            background-color: #eef2f5;
+            padding: 8px 12px;
+            border-radius: 8px;
+            margin: 20px 0 10px;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        hr {
+            margin: 30px 0;
+            border: 0;
+            height: 1px;
+            background: #cbd5e1;
+        }
+        .footer {
+            margin-top: 40px;
+            font-size: 0.8rem;
+            text-align: center;
+            color: #5f7d8c;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 20px;
+        }
+        ul, .content-list {
+            margin-bottom: 15px;
+        }
+        li {
+            margin-bottom: 6px;
+        }
+        @media (max-width: 900px) {
+            .container {
+                padding: 20px;
+            }
+            .risk-table {
+                font-size: 0.7rem;
+            }
+            .risk-table th, .risk-table td {
+                padding: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="title-wrap">
+        <h1>建立ESG风险自查清单</h1>
+        <p style="color: #2c6e7a;">基于《企业ESG合规入门与实操清单》第四章 · E/S/G分类梳理与详解</p>
+    </div>
+
+    <div class="highlight">
+        📌 <strong>核心导读：</strong> 本章将7大ESG风险议题按E（环境）、S（社会）、G（治理）分类，分别梳理标准来源、风险类型、风险传导及检查指标框架。并从每个维度中选取一个议题进行详细讲解（环境-气候变化、社会-劳工合规、治理-反腐败）。
+    </div>
+
+    <!-- ========== 一、议题分类总览 ========== -->
+    <h2>一、七大议题E/S/G分类总览</h2>
+    <div class="info-box">
+        <strong>📋 原文七大议题（页码45-90）</strong><br>
+        1. 以应对气候变化议题为例（E）<br>
+        2. 以环境污染治理议题为例（E）<br>
+        3. 以生物多样性议题为例（E）<br>
+        4. 以劳工合规议题为例（S）<br>
+        5. 以社区影响议题为例（S）<br>
+        6. 以产品质量议题为例（S）<br>
+        7. 以反腐败议题为例（G）
+    </div>
+
+    <!-- ========== 二、环境维度（E）议题梳理 ========== -->
+    <h2>二、环境维度（E）议题梳理</h2>
+    
+    <div class="esg-category">🌿 E1：以应对气候变化议题为例</div>
+    <ul>
+        <li><strong>标准来源：</strong>TCFD、ISSB S2、ESRS E1、GRI305；GHG Protocol、ISO 14064、SBTi；国内《温室气体排放核算方法与报告指南》、“能耗双控”等。</li>
+        <li><strong>风险类型：</strong>物理风险（急性/慢性）与转型风险（政策、技术、市场、声誉）。</li>
+        <li><strong>风险传导四步法：</strong>风险源（暴雨洪水）→ 暴露点（地理位置、基础设施、生产资产等6维度）→ 影响路径（3条串联路径）→ 财务影响（当期损失+中长期影响）。</li>
+        <li><strong>检查指标框架：</strong>治理（董事会审议、政策、专责团队、绩效KPI）；战略（风险识别、情景分析、财务影响）；风险管理（纳入ERM、暴露资产识别）；排放与能耗（范围1/2/3核算、减排目标、能效监测）；合规（能耗法规、碳配额、CBAM）；技术与运营（低碳技术替代、高温影响、应急预案）。共27项指标。</li>
+        <li><strong>背景案例：</strong>2011年泰国洪水导致全球汽车供应链中断，启示需做长期气候敏感性评估。</li>
+    </ul>
+
+    <div class="esg-category">🌿 E2：以环境污染治理议题为例</div>
+    <ul>
+        <li><strong>标准来源：</strong>GRI 303/305/306/307；ESRS E2/E3/E5；ISO 14001；国内《环境保护法》《大气法》《水法》《固废法》等。</li>
+        <li><strong>风险类型：</strong>治理与合规、废气、废水、固废、土壤地下水、监测台账、事故应急、社区环境八大类。</li>
+        <li><strong>风险传导：</strong>排放不达标 → 环保局处罚 → 限产/停产 → 环境责任事故升级 → 财务损失。</li>
+        <li><strong>检查指标框架：</strong>治理与合规（5项）、废气治理（5项）、废水治理（5项）、固废管理（5项）、危废管理（5项），共25项指标。</li>
+        <li><strong>背景案例：</strong>BP墨西哥湾漏油事件（罚款200多亿美元），启示环境安全风险需纳入战略与应急体系。</li>
+    </ul>
+
+    <div class="esg-category">🌿 E3：以生物多样性议题为例</div>
+    <ul>
+        <li><strong>标准来源：</strong>ESRS E4、GRI 304、TNFD、IFC PS6、中国《生态保护红线管理办法》等。</li>
+        <li><strong>风险类型：</strong>原文未详细展开，主要涵盖土地占用、水资源影响、污染排放、外来物种入侵、供应链毁林等。</li>
+        <li><strong>接触点识别：</strong>生产（土地占用、水使用）、供应链（农业土地利用、森林砍伐）、运输（外来物种引入）、产品使用（微塑料）、产品废弃（栖息地扰动）。</li>
+        <li><strong>检查指标框架：</strong>治理与战略（董事会纳入、政策、风险管理）、范围识别（场址清单、敏感区域分析）、运营影响（栖息地影响、物种监测）、水资源、污染、供应链（零毁林要求、生态尽调）、产品服务（生命周期评估）、物流运输等。共25项指标。</li>
+        <li><strong>背景案例：</strong>澳大利亚林业公司破坏濒危物种栖息地被罚36万澳元，启示需识别关键物种栖息地并建立独立监测。</li>
+    </ul>
+
+    <!-- ========== 三、社会维度（S）议题梳理 ========== -->
+    <h2>三、社会维度（S）议题梳理</h2>
+    
+    <div class="esg-category">👥 S1：以劳工合规议题为例</div>
+    <ul>
+        <li><strong>标准来源：</strong>ILO核心公约、UNGP、OECD指南；中国《劳动法》《劳动合同法》《社会保险法》等；GRI 400系列、ESRS S1-S4。</li>
+        <li><strong>风险类型：</strong>八大类：劳工契约与用工合法性、工作时间与加班管理、工资与福利合规、强迫劳动、禁止童工、平等雇佣与反歧视、结社自由、职业健康安全。</li>
+        <li><strong>风险传导：</strong>违法用工 → 劳务仲裁/诉讼 → 罚款 → 社会舆情 → 供应链稽核不通过 → 客户取消订单 → 财务损失。</li>
+        <li><strong>检查指标框架：</strong>用工合法性（合同、派遣）、工时与加班（超时、自愿、加班费）、工资福利（足额、社保、最低工资）、强迫劳动（扣押证件、押金、限制辞职）、童工与未成年（年龄审查、学生工管理）、反歧视（招聘、孕期）、结社自由（工会、申诉机制）。共23项指标。</li>
+        <li><strong>背景案例：</strong>Zara巴西外包工厂奴工问题，启示供应链责任不因分包消失，需重点关注高风险地区劳工。</li>
+    </ul>
+
+    <div class="esg-category">👥 S2：以社区影响议题为例</div>
+    <ul>
+        <li><strong>标准来源：</strong>GRI 413/411、ESRS S3、IFC PS1/PS4/PS7、UNGP、ISO 14001/45001等。</li>
+        <li><strong>风险类型：</strong>八大类：社区健康与安全（气味、噪声、污染）、排放与环境质量影响、水资源占用、土地施工影响、原住民与弱势社区权益、经济影响、社区沟通、投诉申诉机制。</li>
+        <li><strong>风险传导：</strong>污染/噪音 → 社区投诉 → 媒体曝光 → 政府介入 → 停产/整改 → 声誉/经济损失。</li>
+        <li><strong>检查指标框架：</strong>社区健康安全（噪声、气味、危险品运输、应急演练）、环境排放（废气、废水、固废）、水资源影响（取水、节水）、土地施工（影响评估、扬尘）、弱势群体（原住民、迁移补偿）、社会经济（就业、本地采购）、社区沟通（沟通机制、信息披露、定期走访）。共26项指标。</li>
+        <li><strong>背景案例：</strong>印度博帕尔毒气泄漏事故（约1.5-2万人死亡），启示必须将社区影响纳入风险识别，建立应急与赔偿机制。</li>
+    </ul>
+
+    <div class="esg-category">👥 S3：以产品质量议题为例</div>
+    <ul>
+        <li><strong>标准来源：</strong>ISO 9001、IATF 16949、ISO 13485、ISO 22000/HACCP；《产品质量法》《缺陷产品召回管理条例》；GRI 416/417、ESRS S2/S3、SASB行业标准等。</li>
+        <li><strong>风险类型：</strong>质量管理体系（QMS）、原材料与供应商质量、生产过程质量控制、产品安全与法律合规、质量检测与验证、追溯系统与记录完整性、客户投诉与召回、内部审核与持续改进。</li>
+        <li><strong>风险传导：</strong>质量失控 → 客户投诉 → 产品召回 → 工厂审核失败 → 失去订单 → 法律责任 → 品牌受损。</li>
+        <li><strong>检查指标框架：</strong>质量管理体系（体系文件、法规识别、质量目标、职责分工、文件控制）、供应商与来料质量（准入评估、IQC、化学测试、绩效评估、NCR流程）、生产过程控制（关键工序、SOP、设备点检、参数记录、员工培训）、产品安全与法规（强制标准、认证、限制物质、安全风险评估、事件通报）、检验与测试（全流程检验、设备校准、可靠性测试、记录完整性、不良品隔离）。共25项指标。</li>
+        <li><strong>背景案例：</strong>Takata安全气囊缺陷大规模召回，启示关键安全零部件需最严标准+全流程检测+追溯机制。</li>
+    </ul>
+
+    <!-- ========== 四、治理维度（G）议题梳理 ========== -->
+    <h2>四、治理维度（G）议题梳理</h2>
+    
+    <div class="esg-category">⚖️ G1：以反腐败议题为例</div>
+    <ul>
+        <li><strong>标准来源：</strong>ISO 37001、OECD反贿赂公约、UNGC原则10、UNCAC；GRI 205、ESRS G1；国内《刑法》《反不正当竞争法》《招投标法》等。</li>
+        <li><strong>风险类型：</strong>腐败管理体系与治理、员工利益冲突、礼品招待与差旅、供应商/第三方风险、招投标与采购审批、财务记录与会计舞弊、政府往来与许可审批、举报与调查机制。</li>
+        <li><strong>风险传导：</strong>合规违规 → 监管处罚 → 经营受损 → 声誉崩塌。</li>
+        <li><strong>检查指标框架：</strong>治理体系（政策、董事会监督、责任人、风险评估、纳入ERM）、利益冲突（申报、亲属回避、回扣禁止、高风险岗位审查）、礼品与招待（限额、事前审批、费用监控、政府人员禁令、节假日合规）、第三方风险（供应商尽调、代理背景、反腐败协议、异常费用监控、代行贿评估）、招投标风险（虚假招标、比价制度、单一来源监控、采购回扣排查、高价值合同审计）、财务风险（假发票、大额双签）。共26项指标。</li>
+        <li><strong>背景案例：</strong>GSK中国行贿案，启示渠道销售需严格合规准入+协议+审计，加强财务审核。</li>
+    </ul>
+
+    <!-- ========== 五、详细讲解（E/S/G各选一个） ========== -->
+    <h2>五、E/S/G维度详细讲解（各选一个议题）</h2>
+    
+    <!-- 5.1 环境维度：气候变化（详细） -->
+    <h3>🌍 E维度详细：以应对气候变化议题为例</h3>
+    <div class="important">
+        🔴 <strong>重点：气候风险的双重性（物理+转型）与风险传导逻辑</strong>
+    </div>
+    
+    <h4>第一步：标准来源识别</h4>
+    <ul>
+        <li><strong>披露与报告：</strong>TCFD（四大支柱：治理、战略、风险管理、指标与目标）、ISSB S2（2024年起全球强制化）、ESRS E1（欧盟最严）、GRI305。</li>
+        <li><strong>碳核算与评估：</strong>GHG Protocol（全球核算“圣经”）、ISO 14064、SBTi（科学减排目标）、IEA脱碳路径、CDP气候问卷。</li>
+        <li><strong>国内法规：</strong>《温室气体排放核算方法与报告指南》、“能耗双控”、碳足迹制度（试点）。</li>
+    </ul>
+    
+    <h4>第二步：风险类型识别</h4>
+    <ul>
+        <li><strong>物理风险：</strong>
+            <ul>
+                <li>急性：洪水、极端降雨、台风、热浪、干旱 → 直接造成停工、供应链断裂、资产损毁。</li>
+                <li>慢性：气温上升、海平面上升、水资源长期紧缺 → 长期影响运营成本与产能。</li>
+            </ul>
+        </li>
+        <li><strong>转型风险：</strong>
+            <ul>
+                <li>政策与法规：碳税、碳交易、贸易壁垒（如CBAM）。</li>
+                <li>技术：低碳技术替代、清洁技术成本波动。</li>
+                <li>市场：客户减碳要求、低碳产品竞争、原材料成本波动。</li>
+                <li>声誉：ESG舆情、投资人压力。</li>
+            </ul>
+        </li>
+    </ul>
+    
+    <h4>第三步：风险源—暴露点—影响路径—财务影响（以暴雨洪水为例）</h4>
+    <div class="case-card">
+        <p><strong>风险源：</strong>极端强降雨 + 河水倒灌 + 排水系统不足。</p>
+        <p><strong>暴露点（6维）：</strong>地理位置（低洼近河）、基础设施（一层设备、低标准排水）、生产资产（SMT线固定）、库存与物流（地面堆放、道路淹没）、人员运营（到岗困难）、IT数据（机房无防水）。</p>
+        <p><strong>影响路径：</strong></p>
+        <ul>
+            <li>路径A：厂房被淹 → 设备损坏 → 生产中断（2-3周）→ 订单罚款 + 客户转单。</li>
+            <li>路径B：库存受损 → 紧急补购成本上升 + 部分物料断供 → 二次停产。</li>
+            <li>路径C：园区停电 → 全厂停摆 + 设备二次损伤。</li>
+        </ul>
+        <p><strong>财务影响：</strong>当期（设备维修、库存报废、罚款、加班费）；中长期（客户缩减订单、融资利率上升、保险费提高）。</p>
+    </div>
+    
+    <h4>第四步：检查指标示例</h4>
+    <table class="risk-table">
+        <thead><tr><th>类别</th><th>检查问题</th><th>标准来源</th></tr></thead>
+        <tbody>
+            <tr><td>治理</td><td>董事会是否定期审议气候风险？</td><td>TCFD-G1; ISSB S2-5</td></tr>
+            <tr><td>战略</td><td>是否开展气候情景分析？</td><td>TCFD-S3</td></tr>
+            <tr><td>风险管理</td><td>工厂是否位于洪涝/台风风险区？</td><td>TCFD</td></tr>
+            <tr><td>排放与能耗</td><td>是否完成范围1/2/3排放核算？</td><td>GHG Protocol; ESRS E1</td></tr>
+            <tr><td>技术与运营</td><td>是否有极端天气应急预案？</td><td>TCFD</td></tr>
+        </tbody>
+    </table>
+    <div class="case-card">
+        <h4>📋 案例启示：2011年泰国洪水</h4>
+        <p>多家车企因未预估极端洪水风险，导致全球供应链中断。启示：不能仅依赖历史气象数据，需做长期气候敏感性评估，并在自查清单中设置“物理风险+暴露点+供应链脆弱性+应急机制”条目。</p>
+    </div>
+
+    <!-- 5.2 社会维度：劳工合规（详细） -->
+    <h3>👥 S维度详细：以劳工合规议题为例</h3>
+    <div class="important">
+        🔴 <strong>重点：八大劳工风险类别及供应链中的“隔空打击”效应</strong>
+    </div>
+    
+    <h4>第一步：标准来源识别</h4>
+    <ul>
+        <li><strong>国际基础：</strong>ILO八大核心公约（强迫劳动、童工、歧视、结社自由等）、UNGP《商业与人权指导原则》、OECD《负责任商业行为尽职调查指南》。</li>
+        <li><strong>中国法规：</strong>《劳动法》《劳动合同法》《最低工资规定》《社会保险法》等。</li>
+        <li><strong>披露标准：</strong>GRI 400系列、ESRS S1-S4（劳工类）、ISSB S1/S2。</li>
+    </ul>
+    
+    <h4>第二步：风险类型识别（八大类）</h4>
+    <ul>
+        <li>劳工契约与用工合法性（合同、派遣比例）</li>
+        <li>工作时间与加班管理（超时、自愿、加班费）</li>
+        <li>工资与福利合规（足额、社保、最低工资）</li>
+        <li>强迫劳动（扣押证件、押金、限制辞职）</li>
+        <li>禁止童工与未成年工保护（年龄审查、学生工）</li>
+        <li>平等雇佣与反歧视（招聘、孕期、性别）</li>
+        <li>结社自由与集体协商（工会、申诉机制）</li>
+        <li>职业健康安全（OHS）</li>
+    </ul>
+    
+    <h4>第三步：风险源—暴露点—影响路径—财务影响</h4>
+    <div class="case-card">
+        <p><strong>风险源：</strong>未依法签订劳动合同、加班超时、使用童工、工伤未申报、OHS评估不到位等。</p>
+        <p><strong>暴露点：</strong>外包工/派遣工比例高、一线岗位加班依赖度大、计件工资/小时工/学生工、供应链遍布劳动力弱势地区。</p>
+        <p><strong>影响路径：</strong>违法用工 → 劳务仲裁/诉讼 → 罚款 → 社会舆情 → 供应链稽核不通过 → 客户取消订单 → 财务损失。</p>
+    </div>
+    
+    <h4>第四步：检查指标示例</h4>
+    <table class="risk-table">
+        <thead><tr><th>风险类别</th><th>检查问题</th><th>标准来源</th></tr></thead>
+        <tbody>
+            <tr><td>用工合法性</td><td>所有员工是否在入职30日内签订劳动合同？</td><td>《劳动合同法》第10条</td></tr>
+            <tr><td>工时与加班</td><td>是否存在超法定工时（&gt;36小时/月）？</td><td>《劳动法》</td></tr>
+            <tr><td>工资福利</td><td>是否依法为员工缴纳社保？</td><td>《社会保险法》</td></tr>
+            <tr><td>强迫劳动</td><td>是否扣押员工身份证件？</td><td>ILO 29号公约</td></tr>
+            <tr><td>童工与未成年</td><td>是否建立员工年龄审查机制？</td><td>《禁止童工规定》</td></tr>
+            <tr><td>反歧视</td><td>招聘是否存在性别/年龄等歧视？</td><td>《劳动法》</td></tr>
+            <tr><td>结社自由</td><td>是否允许员工加入工会？</td><td>ILO 87号/98号公约</td></tr>
+        </tbody>
+    </table>
+    <div class="case-card">
+        <h4>📋 案例启示：Zara巴西外包工厂奴工问题</h4>
+        <p>工人每日工作16-19小时，存在未成年工、极差居住条件。后果：供应商被列入巴西“奴工黑名单”，品牌声誉严重受损。启示：供应链责任不因分包而消失，高风险地区/劳工群体需重点关注。</p>
+    </div>
+
+    <!-- 5.3 治理维度：反腐败（详细） -->
+    <h3>⚖️ G维度详细：以反腐败议题为例</h3>
+    <div class="important">
+        🔴 <strong>重点：第三方风险、礼品招待管控及招投标合规</strong>
+    </div>
+    
+    <h4>第一步：标准来源识别</h4>
+    <ul>
+        <li><strong>国际标准：</strong>ISO 37001《反贿赂管理体系》、OECD反贿赂公约、UNGC原则10、UNCAC。</li>
+        <li><strong>披露标准：</strong>GRI 205、ESRS G1（欧盟CSRD）。</li>
+        <li><strong>国内法规：</strong>《刑法》（商业贿赂条款）、《反不正当竞争法》、《招投标法》、《政府采购法》。</li>
+    </ul>
+    
+    <h4>第二步：风险类别识别</h4>
+    <ul>
+        <li>腐败管理体系与治理（政策、监督、风险评估）</li>
+        <li>员工行为与利益冲突（亲属回避、回扣禁止）</li>
+        <li>礼品、招待、差旅（限额、审批、监控）</li>
+        <li>供应商、承包商、第三方风险（尽调、协议、异常监控）</li>
+        <li>招投标、采购、授权审批风险（虚假招标、比价、单一来源）</li>
+        <li>财务记录与会计舞弊（假发票、双签审批）</li>
+        <li>政府往来与许可审批</li>
+        <li>举报、申诉与调查机制</li>
+    </ul>
+    
+    <h4>第三步：风险源—暴露点—影响路径—财务影响</h4>
+    <div class="case-card">
+        <p><strong>风险源：</strong>私下回扣、虚构费用、假发票、串标、礼品娱乐超标。</p>
+        <p><strong>暴露点：</strong>高价值采购、政府审批/环评、工程类项目、第三方中介、海外子公司、公务接待费用高。</p>
+        <p><strong>影响路径：</strong>合规违规 → 监管处罚 → 经营受损 → 声誉崩塌。</p>
+    </div>
+    
+    <h4>第四步：检查指标示例</h4>
+    <table class="risk-table">
+        <thead><tr><th>风险类别</th><th>检查问题</th><th>标准来源</th></tr></thead>
+        <tbody>
+            <tr><td>治理体系</td><td>企业是否制定反腐败/反贿赂政策？</td><td>ISO 37001, GRI205</td></tr>
+            <tr><td>利益冲突</td><td>员工是否申报利益冲突？</td><td>ISO 37001</td></tr>
+            <tr><td>礼品与招待</td><td>是否制定礼品与招待限额？</td><td>ISO 37001</td></tr>
+            <tr><td>第三方风险</td><td>是否对供应商进行反腐尽调？</td><td>ISO 37001, OECD</td></tr>
+            <tr><td>招投标风险</td><td>是否存在虚假招标或内定供应商？</td><td>《招投标法》</td></tr>
+            <tr><td>财务风险</td><td>大额付款是否双签审批？</td><td>内控要求</td></tr>
+        </tbody>
+    </table>
+    <div class="case-card">
+        <h4>📋 案例启示：GSK中国行贿案</h4>
+        <p>GSK通过回扣、礼品、旅行等方式向医务人员行贿以换取药品采购合同。后果：责任人受刑事处罚，公司声誉严重受损。启示：渠道销售需严格合规准入+协议+审计，加强财务与报销审核。</p>
+    </div>
+
+    <hr>
+
+    <!-- 重难点总结 -->
+    <div class="highlight">
+        ✅ <strong>本章重难点总结（完全基于原文逻辑）</strong><br><br>
+        1️⃣ <strong>E/S/G分类清晰：</strong>环境（气候、污染、生物多样性）；社会（劳工、社区、产品质量）；治理（反腐败）。<br>
+        2️⃣ <strong>每个议题均需遵循四步法：</strong>标准来源识别 → 风险类型识别 → 风险源/暴露点/影响路径/财务影响 → 形成检查指标。<br>
+        3️⃣ <strong>标准来源多层级：</strong>披露标准（TCFD/GRI/ESRS）、管理标准（ISO）、法规（国内/国际）。<br>
+        4️⃣ <strong>风险传导逻辑链：</strong>从触发条件到暴露环节，再到影响路径，最终量化财务损失。<br>
+        5️⃣ <strong>案例驱动：</strong>泰国洪水、BP漏油、博帕尔毒气、Zara奴工、Takata气囊、GSK贿赂等案例真实反映了ESG风险的破坏力。
+    </div>
+
+    <div class="footer">
+        📄 本总结严格基于《企业ESG合规入门与实操清单》第4部分（页码44-90）内容，未做任何虚构或增补。<br>
+        所有议题梳理均忠实于原文结构，详细讲解部分从原文中提取核心内容并重新组织呈现。重要公式：原文未提供。
+    </div>
+</div>
+</body>
+</html>
